@@ -11,6 +11,7 @@ import Images from '../../utils/image/images'
 // import {Images} from '../../utils/image/index'
 
 
+
 export default class HomeScreen extends Component{
 
     static navigationOptions = {
@@ -22,12 +23,13 @@ export default class HomeScreen extends Component{
     render(){
         const { navigate } = this.props.navigation;
         return(
-        <View style={CommonStyles.center_layout_container}>
+        <View style={[CommonStyles.center_layout_container, homeStyles.container]}>
 
             <Image style={homeStyles.image} source={Images.TabIcon.Run_Image_F}></Image>
             <Image style={homeStyles.image} source={Images.TabIcon.Run_Image_S}></Image>
             <Image style={homeStyles.image} source={Images.TabIcon.Me_Image_F}></Image>
             <Image style={homeStyles.image} source={Images.TabIcon.Me_Image_S}></Image>
+
             <Image style={[homeStyles.image,homeStyles.wideImage]} source={Images.WebImage.BaiduLogo_Image}></Image>
             <Image style={[homeStyles.image,homeStyles.wideImage,homeStyles.largeImage]} source={Images.WebImage.Http_Image}></Image>
 
@@ -40,6 +42,12 @@ export default class HomeScreen extends Component{
 
 
 const homeStyles = StyleSheet.create({
+
+    container : {
+        marginTop : 50,
+        justifyContent : 'flex-start'
+    },
+
     image : {
         width : 40,
         height : 40,
@@ -48,6 +56,7 @@ const homeStyles = StyleSheet.create({
     wideImage : {
         width:100,
     },
+
     largeImage : {
         marginTop : 20,
         height    : 100,

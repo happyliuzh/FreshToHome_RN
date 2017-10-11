@@ -9,15 +9,22 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View, Image
 } from 'react-native';
 
 import {StackNavigator, TabNavigator} from 'react-navigation';
+
+//scene
 import HomeScreen from './js/screens/HomeScreen/HomeScreen'
 import DetailScreen from './js/screens/DetailScreen/DetailScreen'
 import CartScreen from './js/screens/CartScreen/CartScreen'
 import MeScreen from './js/screens/MeScreen/MeScreen'
 import LoginScreen from './js/screens/LoginScreen/LoginScreen'
+import Icon from 'react-native-vector-icons/Ionicons'
+
+//util
+import Images from './js/utils/image/images'
+import Icons  from './js/utils/icon/icons'
 
 
 //测试StackNavigator
@@ -30,10 +37,74 @@ const stackNavigatorApp = StackNavigator({
 
 //测试TabNavigator
 const tabBarNavigatorApp = TabNavigator({
-    Home : {screen : HomeScreen},
-    Cart : {screen : CartScreen},
-    Me : {screen : MeScreen}
-});
+    Home : {
+        screen : HomeScreen,
+        navigationOptions : {
+            tabBarLabel : '生鲜货架',
+            tabBarIcon: (({tintColor,focused}) => {
+                return(
+                    <Icon name="ios-home" size={30} color={tintColor} />
+                )
+            }), // 设置标签栏的图标。需要单独设置。
+
+        }
+
+    },
+    Cart : {
+        screen : CartScreen,
+        navigationOptions : {
+            tabBarLabel : '购物车',
+            tabBarIcon: (({tintColor,focused}) => {
+                return(
+                    <Icon name="ios-cart" size={30} color={tintColor} />
+                )
+            }), // 设置标签栏的图标。需要单独设置。
+
+        }
+    },
+    Me : {
+        screen : MeScreen,
+        navigationOptions : {
+            tabBarLabel : '我',
+            tabBarIcon: (({tintColor,focused}) => {
+                return(
+                    <Icon name="ios-person" size={30} color={tintColor} />
+                )
+            }), // 设置标签栏的图标。需要单独设置。
+
+        }
+    },
+    },
+
+    {
+        tabBarPosition : 'bottom',
+        swipeEnabled : false,
+        tabBarOptions: {
+            activeTintColor: '#ff8500', // 文字和图片选中颜色
+            inactiveTintColor: '#999', // 文字和图片未选中颜色
+            showIcon: true, // android 默认不显示 icon, 需要设置为 true 才会显示
+            indicatorStyle: {
+                height: 0  // 如TabBar下面显示有一条线，可以设高度为0后隐藏
+            },
+            style: {
+                backgroundColor: '#fff', // TabBar 背景色
+                // height: 44
+            },
+            labelStyle: {
+                fontSize: 10, // 文字大小
+
+            },
+            iconStyle : {
+
+            }
+        },
+
+    }
+);
+
+
+
+
 // export default tabBarNavigatorApp;
 
 
