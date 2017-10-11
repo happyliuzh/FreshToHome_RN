@@ -20,7 +20,7 @@ export default class LoginScreen extends Component{
 
         return(
             <View style={[CommonStyles.center_layout_container,{justifyContent:'flex-end'}]}>
-                
+
                 <View style={{marginBottom : 200}}>
                     <TouchableOpacity onPress={()=>{navigate('Main')}}>
                         <View style = {styles.LoginView}>

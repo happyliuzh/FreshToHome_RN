@@ -11,9 +11,15 @@ export default class MeScreen extends Component{
 
     render(){
         return(
-        <View style = {CommonStyles.center_layout_container}>
-            <Text>Me Screen</Text>
+        <View style = {CommonStyles.top_layout_container}>
+            <View style = {{alignItems : 'center',marginTop : 200}}>
+                <Text> me scene </Text>
+            </View>
         </View>
         );
     }
 }
+
+
+
+

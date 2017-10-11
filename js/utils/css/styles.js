@@ -5,6 +5,11 @@ const CommonStyles = StyleSheet.create({
         flex : 1,
         justifyContent : 'center',
         alignItems : 'center',
+    },
+
+    top_layout_container : {
+        flex:1,
+        justifyContent:'flex-start',
     }
 });
 
