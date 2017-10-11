@@ -23,8 +23,8 @@ import LoginScreen from './js/screens/LoginScreen/LoginScreen'
 import Icon from 'react-native-vector-icons/Ionicons'
 
 //util
-import Images from './js/utils/image/images'
-import Icons  from './js/utils/icon/icons'
+// import Images from './js/utils/image/images'
+// import Icons  from './js/utils/icon/icons'
 
 
 //测试StackNavigator
@@ -56,7 +56,7 @@ const tabBarNavigatorApp = TabNavigator({
             tabBarLabel : '购物车',
             tabBarIcon: (({tintColor,focused}) => {
                 return(
-                    <Icon name="ios-cart" size={30} color={tintColor} />
+                <Icon name="ios-cart" size={30} color={tintColor} style={{marginLeft:-5}} />
                 )
             }), // 设置标签栏的图标。需要单独设置。
 
