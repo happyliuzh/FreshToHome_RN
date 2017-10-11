@@ -1,10 +1,22 @@
 import React, {Component} from 'react'
-import {View, Text, StyleSheet} from 'react-native'
+import {View, Text, StyleSheet,Button} from 'react-native'
+import CommonStyles from '../../utils/css/styles'
 
 export default class DetailScreen extends Component{
+
+    static navigationOptions = {
+        title : "商品详情",
+        headerRight : <Button title="分享" onPress={()=>{alert('去分享')}}></Button>,
+    };
+
     render(){
+        const  {params} = this.props.navigation.state;
+        const { navigate } = this.props.navigation;
+
         return(
-            <Text>Detail Screen</Text>
+        <View style={CommonStyles.center_layout_container}>
+            <Button title={params.params} onPress={()=>{alert("yes , i am !")}}></Button>
+        </View>
         );
     }
 }

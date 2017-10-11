@@ -12,30 +12,82 @@ import {
   View
 } from 'react-native';
 
+import {StackNavigator, TabNavigator} from 'react-navigation';
+import HomeScreen from './js/screens/HomeScreen/HomeScreen'
+import DetailScreen from './js/screens/DetailScreen/DetailScreen'
+import CartScreen from './js/screens/CartScreen/CartScreen'
+import MeScreen from './js/screens/MeScreen/MeScreen'
+import LoginScreen from './js/screens/LoginScreen/LoginScreen'
+
+
+//测试StackNavigator
+const stackNavigatorApp = StackNavigator({
+    Home : {screen: HomeScreen},
+    Detail : {screen: DetailScreen}
+});
+
+// export default stackNavigatorApp;
+
+//测试TabNavigator
+const tabBarNavigatorApp = TabNavigator({
+    Home : {screen : HomeScreen},
+    Cart : {screen : CartScreen},
+    Me : {screen : MeScreen}
+});
+// export default tabBarNavigatorApp;
+
+
+//将StackNavigator与TabNavigator结合起来
+const composeTabAndStackNavigatorApp = StackNavigator({
+    Tab : {screen : tabBarNavigatorApp},
+    Detail : {screen : DetailScreen}
+});
+
+export default composeTabAndStackNavigatorApp;
+
+//加入login的逻辑。
+const freshToHomeApp = StackNavigator({
+    Login : {screen : LoginScreen},
+    Main : {screen : composeTabAndStackNavigatorApp}
+});
+// export default freshToHomeApp;
+
+
+
+
+
 const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
+    ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
+    android: 'Double tap R on your keyboard to reload,\n' +
     'Shake or press menu button for dev menu',
 });
 
-export default class App extends Component<{}> {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
-      </View>
-    );
-  }
-}
+// export default class App extends Component<{}> {
+//   // render() {
+//   //   return (
+//   //     <View style={styles.container}>
+//   //       <Text style={styles.welcome}>
+//   //         Welcome to React Native!
+//   //       </Text>
+//   //       <Text style={styles.instructions}>
+//   //         To get started, edit App.js
+//   //       </Text>
+//   //       <Text style={styles.instructions}>
+//   //         {instructions}
+//   //       </Text>
+//   //     </View>
+//   //   );
+//   // }
+//
+//     render(){
+//       return(
+//           <SimpleApp/>
+//       );
+//     }
+//
+//
+// }
 
 const styles = StyleSheet.create({
   container: {
