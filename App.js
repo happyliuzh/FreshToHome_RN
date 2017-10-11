@@ -107,22 +107,30 @@ const tabBarNavigatorApp = TabNavigator({
 
 // export default tabBarNavigatorApp;
 
-
 //将StackNavigator与TabNavigator结合起来
 const composeTabAndStackNavigatorApp = StackNavigator({
     Tab : {screen : tabBarNavigatorApp},
     Detail : {screen : DetailScreen}
 });
 
-export default composeTabAndStackNavigatorApp;
+// export default composeTabAndStackNavigatorApp;
 
 //加入login的逻辑。
 const freshToHomeApp = StackNavigator({
-    Login : {screen : LoginScreen},
-    Main : {screen : composeTabAndStackNavigatorApp}
+    Login : {
+        screen : LoginScreen,
+        navigationOptions : {
+            header : null,
+        }
+    },
+    Main : {
+        screen : composeTabAndStackNavigatorApp,
+        navigationOptions : {
+            header : null,
+        }
+    }
 });
-// export default freshToHomeApp;
-
+export default freshToHomeApp;
 
 
 

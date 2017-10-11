@@ -16,6 +16,10 @@ export default {
 
     },
 
+    Login : {
+        LoginLogo : require('./res/logo.jpeg'),
+    },
+
     NativeImage : {
         // Tab_btn_news_f : require('tab_btn_news_f'),
     }

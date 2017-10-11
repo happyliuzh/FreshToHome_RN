@@ -17,7 +17,6 @@ export default class HomeScreen extends Component{
     static navigationOptions = {
         title: '生鲜货架',
         headerBackTitle : '返回',
-
     };
 
     render(){
