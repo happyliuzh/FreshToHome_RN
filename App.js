@@ -15,11 +15,11 @@ import {
 import {StackNavigator, TabNavigator} from 'react-navigation';
 
 //scene
-import HomeScreen from './js/screens/HomeScreen/HomeScreen'
-import DetailScreen from './js/screens/DetailScreen/DetailScreen'
-import CartScreen from './js/screens/CartScreen/CartScreen'
-import MeScreen from './js/screens/MeScreen/MeScreen'
-import LoginScreen from './js/screens/LoginScreen/LoginScreen'
+import HomeScreen from './js/screens/HomeScreen'
+import DetailScreen from './js/screens/DetailScreen'
+import CartScreen from './js/screens/CartScreen'
+import MeScreen from './js/screens/MeScreen'
+import LoginScreen from './js/screens/LoginScreen'
 import Icon from 'react-native-vector-icons/Ionicons'
 
 //util

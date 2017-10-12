@@ -6,9 +6,7 @@ import {View,
     Image,
 } from 'react-native'
 import CommonStyles from '../../utils/css/styles'
-import Icons  from '../../utils/icon/icons'
-import Images from '../../utils/image/images'
-// import {Images} from '../../utils/image/index'
+import Images from '../../utils/image'
 
 
 
@@ -33,7 +31,7 @@ export default class HomeScreen extends Component{
             <Image style={[homeStyles.image,homeStyles.wideImage,homeStyles.largeImage]} source={Images.WebImage.Http_Image}></Image>
 
 
-            <Button title="HomeScreen" onPress= {() => navigate('Detail',{params : "hello are you detail screen?"})}/>
+            <Button title="点我进入详情-》" onPress= {() => navigate('Detail',{params : "hello are you detail screen?"})}/>
         </View>
         );
     }
