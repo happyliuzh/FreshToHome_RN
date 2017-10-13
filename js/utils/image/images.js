@@ -29,6 +29,10 @@ export default {
         Order_All       : require('./res/Me/order_all.png'),
     },
 
+    Common : {
+        ArrowRight      : require('./res/Common/arrow_right.png'),
+    },
+
     NativeImage : {
         // Tab_btn_news_f : require('tab_btn_news_f'),
     }
