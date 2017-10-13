@@ -113,7 +113,7 @@ const composeTabAndStackNavigatorApp = StackNavigator({
     Detail : {screen : DetailScreen}
 });
 
-// export default composeTabAndStackNavigatorApp;
+export default composeTabAndStackNavigatorApp;
 
 //加入login的逻辑。
 const freshToHomeApp = StackNavigator({
@@ -130,7 +130,7 @@ const freshToHomeApp = StackNavigator({
         }
     }
 });
-export default freshToHomeApp;
+// export default freshToHomeApp;
 
 
 

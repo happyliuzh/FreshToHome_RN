@@ -20,6 +20,15 @@ export default {
         LoginLogo : require('./res/logo.jpeg'),
     },
 
+    Me : {
+        UserHeadDefault : require('./res/Me/user_head_image_default.png'),
+        PendingPayment  : require('./res/Me/pending_payment.png'),
+        To_be_shipped   : require('./res/Me/to_be_shipped.png'),
+        Shipped         : require('./res/Me/shipped.png'),
+        Order_Completed : require('./res/Me/completed.png'),
+        Order_All       : require('./res/Me/order_all.png'),
+    },
+
     NativeImage : {
         // Tab_btn_news_f : require('tab_btn_news_f'),
     }
