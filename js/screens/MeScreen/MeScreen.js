@@ -11,6 +11,7 @@ import {View,
 import CommonStyles from '../../utils/css/styles'
 import Images from '../../utils/image'
 import OrderHandleItem from '../../components/Me/OrderHandleItem'
+import Styles from '../../utils/css/styles'
 
 
 export default class MeScreen extends Component{
@@ -19,35 +20,40 @@ export default class MeScreen extends Component{
         title : '我的'
     };
 
-
     constructor(){
         super();
         this.state = {
-            dataSource : [{title: '关于我们'}],
+            dataSource : [{title : '收货地址管理'},{title: '关于我们'}],
         };
     }
 
-    pendingPaymentAction=()=>{
+    //订单相关的点击事件。
+    _pendingPaymentAction=()=>{
         alert('待付款！');
     };
 
-    tobeshippedAction=()=>{
+    _tobeshippedAction=()=>{
         alert('待发货！');
     };
 
-    shippedAction=()=>{
+    _shippedAction=()=>{
         alert('已发货！');
     };
 
-    completedOrderAction=()=>{
+    _completedOrderAction=()=>{
         alert('已完成！');
     };
 
-    allOrderAction=()=>{
+    _allOrderAction=()=>{
         alert('全部！');
     };
 
+    _rowPress=(item)=>{
+        alert(item.title);
+    };
 
+
+    //下面是相关的view 模块
     listHeader = ()=>{
         return (
             <View style={MeStyles.listHeader}>
@@ -64,27 +70,27 @@ export default class MeScreen extends Component{
 
                 <OrderHandleItem title='待付款'
                                  image={Images.Me.PendingPayment}
-                                 onPress={this.pendingPaymentAction}
+                                 onPress={this._pendingPaymentAction}
                 >
                 </OrderHandleItem>
                 <OrderHandleItem title='待发货'
                                  image={Images.Me.To_be_shipped}
-                                 onPress={this.tobeshippedAction}
+                                 onPress={this._tobeshippedAction}
                 >
                 </OrderHandleItem>
                 <OrderHandleItem title='已发货'
                                  image={Images.Me.Shipped}
-                                 onPress={this.shippedAction}
+                                 onPress={this._shippedAction}
                 >
                 </OrderHandleItem>
                 <OrderHandleItem title='已完成'
                                  image={Images.Me.Order_Completed}
-                                 onPress={this.completedOrderAction}
+                                 onPress={this._completedOrderAction}
                 >
                 </OrderHandleItem>
                 <OrderHandleItem title='全部'
                                  image={Images.Me.Order_All}
-                                 onPress={this.allOrderAction}
+                                 onPress={this._allOrderAction}
                 >
                 </OrderHandleItem>
             </View>
@@ -95,26 +101,30 @@ export default class MeScreen extends Component{
 
         if(Platform.OS === 'ios'){
             return (
-                <TouchableHighlight onPress={()=>{alert('123'); }}>
+
+                <TouchableHighlight onPress={this._rowPress.bind(this,item.item)}>
                     <View style={MeStyles.listViewRow}>
 
-                        <Text style={{marginLeft:20}}>
-                            Data : {item.title}
+                        <Text style={{marginLeft:20,fontSize:16}}>
+                            {item.item.title}
                         </Text>
 
                         <Image source={Images.Common.ArrowRight} style={{width : 30, height:30, marginRight:20}}>
 
                         </Image>
+
                     </View>
-                </TouchableHighlight>);
+                </TouchableHighlight>
+
+            );
         }
 
         return (
             <TouchableNativeFeedback onPress={()=>{alert('123'); }}>
                 <View style={MeStyles.listViewRow}>
 
-                    <Text style={{marginLeft:20}}>
-                        Data : {item.title}
+                    <Text style={{marginLeft:20, fontSize:16}}>
+                        {item.item.title}
                     </Text>
 
                     <Image source={Images.Common.ArrowRight} style={{width : 30, height:30, marginRight:20}}>
@@ -126,9 +136,6 @@ export default class MeScreen extends Component{
         );
     }
 
-    keyExtractor = (item: Object, index: number) => {
-            return index;
-        };
 
     render(){
         return(
@@ -139,12 +146,12 @@ export default class MeScreen extends Component{
                       onRefresh={()=>{alert('refreshing...')}}
                       ListHeaderComponent={this.listHeader}
 
-                      keyExtractor={this.keyExtractor}  //使用json中的title动态绑定key
+                      keyExtractor={(item, index) => {return index;}}  //使用json中的title动态绑定key
 
                       data = {this.state.dataSource} //数据源
                       renderItem = {(item) => this.renderRow(item)} //每一行render
 
-                //解决flatlist动一下才显示的问题
+                      //解决flatlist动一下才显示的问题
                       removeClippedSubviews={false}
 
             >

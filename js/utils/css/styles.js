@@ -10,6 +10,14 @@ const CommonStyles = StyleSheet.create({
     top_layout_container : {
         flex:1,
         justifyContent:'flex-start',
+    },
+
+    horizontalLine : {
+        height : 0.5,
+        flex : 1,
+        backgroundColor:'#333333',
+        marginLeft : 16,
+        marginRight : 16,
     }
 });
 
