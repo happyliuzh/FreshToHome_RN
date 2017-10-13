@@ -23,13 +23,12 @@ import LoginScreen from './js/screens/LoginScreen'
 import Icon from 'react-native-vector-icons/Ionicons'
 
 //util
-// import Images from './js/utils/image/images'
-// import Icons  from './js/utils/icon/icons'
+import ColorDefine from './js/utils/color'
 
 
 //测试StackNavigator
 const stackNavigatorApp = StackNavigator({
-    Home : {screen: HomeScreen},
+    Home   : {screen: HomeScreen},
     Detail : {screen: DetailScreen}
 });
 
@@ -80,7 +79,7 @@ const tabBarNavigatorApp = TabNavigator({
         tabBarPosition : 'bottom',
         swipeEnabled : false,
         tabBarOptions: {
-            activeTintColor: '#ff8500', // 文字和图片选中颜色
+            activeTintColor: ColorDefine.MainColor, // 文字和图片选中颜色
             inactiveTintColor: '#999', // 文字和图片未选中颜色
             showIcon: true, // android 默认不显示 icon, 需要设置为 true 才会显示
             indicatorStyle: {
