@@ -77,7 +77,7 @@ const tabBarNavigatorApp = TabNavigator({
 
     {
         tabBarPosition : 'bottom',
-        swipeEnabled : false,
+        swipeEnabled : Platform.OS == 'ios' ? false : true,
         tabBarOptions: {
             activeTintColor: ColorDefine.MainColor, // 文字和图片选中颜色
             inactiveTintColor: '#999', // 文字和图片未选中颜色
@@ -87,7 +87,7 @@ const tabBarNavigatorApp = TabNavigator({
             },
             style: {
                 backgroundColor: '#fff', // TabBar 背景色
-                // height: 44
+                height: Platform.OS == 'ios' ? 54 : 54,
             },
             labelStyle: {
                 fontSize: 10, // 文字大小
