@@ -5,9 +5,9 @@
 export default {
     TabIcon : {
         Run_Image_F : require('./res/health_btn_run_f.png'),
-        Run_Image_S : require('./res/health_btn_run_s@3x.png'),
-        Me_Image_F  : require('./res/btn_wo_default@3x.png'),
-        Me_Image_S  : require('./res/btn_wo_pre@3x.png'),
+        Run_Image_S : require('./res/health_btn_run_s.png'),
+        Me_Image_F  : require('./res/btn_wo_default.png'),
+        Me_Image_S  : require('./res/btn_wo_pre.png'),
     },
 
     WebImage : {

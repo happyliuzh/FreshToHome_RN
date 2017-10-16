@@ -24,6 +24,7 @@ export default class MeScreen extends Component{
         super();
         this.state = {
             dataSource : [{title : '收货地址管理'},{title: '关于我们'}],
+            refreshing:false,
         };
     }
 
@@ -136,14 +137,33 @@ export default class MeScreen extends Component{
         );
     }
 
+    _renderSeprator= ()=>{
+        return (
+            <View style={ {backgroundColor : '#f6f6f6',height : 5}}>
+
+            </View>
+        );
+    };
+
+
 
     render(){
         return(
         <View style = {CommonStyles.top_layout_container}>
 
             <FlatList style={MeStyles.flatList}
-                      refreshing={false}
-                      onRefresh={()=>{alert('refreshing...')}}
+
+                      refreshing={this.state.refreshing}
+
+                      onRefresh={()=>{
+                                        this.setState({refreshing : true});
+
+                                        setTimeout(()=>{
+                                            this.setState({refreshing : false});
+                                            alert('refreshed...'); }, 3000);
+                                        }
+                                }
+
                       ListHeaderComponent={this.listHeader}
 
                       keyExtractor={(item, index) => {return index;}}  //使用json中的title动态绑定key
@@ -151,7 +171,10 @@ export default class MeScreen extends Component{
                       data = {this.state.dataSource} //数据源
                       renderItem = {(item) => this.renderRow(item)} //每一行render
 
+                      ItemSeparatorComponent = {this._renderSeprator}
+
                       //解决flatlist动一下才显示的问题
+
                       removeClippedSubviews={false}
 
             >
@@ -194,7 +217,7 @@ const MeStyles = StyleSheet.create({
     },
 
     listViewRow : {
-        height:44,
+        height:50,
         backgroundColor:'#ffff',
         flexDirection : 'row',
         justifyContent:'space-between',
