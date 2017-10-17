@@ -12,7 +12,11 @@
 		"react-native-splash-screen": "^3.0.1",
 		"react-native-ultimate-listview": "^3.2.4",
 		"react-native-vector-icons": "^4.4.2",
-		"react-navigation": "^1.0.0-beta.13"
+		"react-navigation": "^1.0.0-beta.13",
+		"react-redux": "^4.4.6",
+		"redux": "^3.6.0",
+		"redux-thunk": "^2.1.0",
+		"whatwg-fetch": "^2.0.1"
 	},
 	"devDependencies": {
 		"babel-jest": "21.2.0",

@@ -14,6 +14,9 @@ import {
 
 import {StackNavigator, TabNavigator} from 'react-navigation';
 
+//redux
+import {Provider} from 'react-redux'
+
 //scene
 import HomeScreen from './js/screens/HomeScreen'
 import DetailScreen from './js/screens/DetailScreen'
