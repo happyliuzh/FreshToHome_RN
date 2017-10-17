@@ -23,7 +23,7 @@ export default class MeScreen extends Component{
     constructor(){
         super();
         this.state = {
-            dataSource : [{title : '收货地址管理'},{title: '关于我们'}],
+            dataSource : [{title : '收货地址管理'},{title : '问题反馈'},{title: '关于我们'}],
             refreshing:false,
         };
     }
@@ -106,7 +106,7 @@ export default class MeScreen extends Component{
                 <TouchableHighlight onPress={this._rowPress.bind(this,item.item)}>
                     <View style={MeStyles.listViewRow}>
 
-                        <Text style={{marginLeft:20,fontSize:16}}>
+                        <Text style={{marginLeft:20,fontSize:16,color:'#333333'}}>
                             {item.item.title}
                         </Text>
 

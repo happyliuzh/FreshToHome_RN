@@ -11,7 +11,15 @@ export default class DetailScreen extends Component{
 
     static navigationOptions = {
         title : "商品详情",
-        headerRight : <Button title="分享" onPress={()=>{alert('去分享')}}></Button>,
+        headerRight : <Button title="分享" onPress={()=>{
+
+                                                const { navigate } = this.props.navigation;
+                                                // navigate.goBack();
+                                                // navigate('Tab');
+                                                alert('去分享！');
+
+                                            }}>
+                      </Button>,
         // headerRight : <Icon.Button></Icon.Button>
     };
 
