@@ -181,7 +181,10 @@ export default class MeScreen extends Component{
             </FlatList>
         </View>
         );
-    }
+    };
+
+
+
 }
 
 const MeStyles = StyleSheet.create({
