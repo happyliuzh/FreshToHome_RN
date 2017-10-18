@@ -4,7 +4,7 @@
 
 import * as MeActions from './actionTypes'
 
-export function requestData(){
+export default function requestData(){
     return {
         type : MeActions.FETCH_ME_INFO_REQUEST,
     };

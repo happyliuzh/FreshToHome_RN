@@ -3,7 +3,7 @@
  */
 
 import {combineReducers} from 'redux'
-import meReducer from './meReducer/meReducer'
+import meReducer from './meReducer'
 
 export default combineReducers({
     meReducer,
