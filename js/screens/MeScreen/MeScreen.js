@@ -8,13 +8,20 @@ import {View,
     TouchableNativeFeedback,
     Platform,
 } from 'react-native'
+
+//redux 绑定
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import Actions from '../../state/redux/action'
+
+
 import CommonStyles from '../../utils/css/styles'
 import Images from '../../utils/image'
 import OrderHandleItem from '../../components/Me/OrderHandleItem'
-import Styles from '../../utils/css/styles'
 
 
-export default class MeScreen extends Component{
+
+class MeScreen extends Component{
 
     static navigationOptions = {
         title : '我的'
@@ -24,7 +31,6 @@ export default class MeScreen extends Component{
         super();
         this.state = {
             dataSource : [{title : '收货地址管理'},{title : '问题反馈'},{title: '关于我们'}],
-            refreshing:false,
         };
     }
 
@@ -153,14 +159,18 @@ export default class MeScreen extends Component{
 
             <FlatList style={MeStyles.flatList}
 
-                      refreshing={this.state.refreshing}
+                      refreshing={this.props.refreshing}
 
                       onRefresh={()=>{
-                                        this.setState({refreshing : true});
+                                        this.props.actions.requestData();
 
                                         setTimeout(()=>{
-                                            this.setState({refreshing : false});
-                                            alert('refreshed...'); }, 3000);
+
+                                            alert('refreshed...');
+                                            this.props.actions.requestSuccess();
+
+                                        }, 3000);
+
                                         }
                                 }
 
@@ -229,5 +239,20 @@ const MeStyles = StyleSheet.create({
 });
 
 
+const mapStateToProps = (state) => {
+    return {
+        refreshing : state.meReducer.loading,
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+
+    return {
+        actions : bindActionCreators(Actions.meAction, dispatch),
+    };
+
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(MeScreen);
 
 
