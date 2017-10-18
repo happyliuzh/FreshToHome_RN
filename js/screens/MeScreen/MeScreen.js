@@ -14,6 +14,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import Actions from '../../state/redux/action'
 
+import MeItemTypes from './meItemType'
 
 import CommonStyles from '../../utils/css/styles'
 import Images from '../../utils/image'
@@ -30,7 +31,25 @@ class MeScreen extends Component{
     constructor(){
         super();
         this.state = {
-            dataSource : [{title : '收货地址管理'},{title : '问题反馈'},{title: '关于我们'}],
+            dataSource : [{
+                    title : '全部订单',
+                    type  : MeItemTypes.ME_ALL_ORDER,
+                },
+                {
+                    title : '收货地址管理',
+                    type  : MeItemTypes.ME_Manage_ADDR,
+
+                },
+                {
+                    title : '问题反馈',
+                    type  : MeItemTypes.ME_FEED_BACK,
+
+                },
+                {
+                    title: '关于我们',
+                    type  : MeItemTypes.ME_ABOUT_US,
+
+                }],
         };
     }
 
@@ -39,12 +58,8 @@ class MeScreen extends Component{
         alert('待付款！');
     };
 
-    _tobeshippedAction=()=>{
-        alert('待发货！');
-    };
-
-    _shippedAction=()=>{
-        alert('已发货！');
+    _tobeReceivedAction=()=>{
+        alert('待收货！');
     };
 
     _completedOrderAction=()=>{
@@ -55,7 +70,39 @@ class MeScreen extends Component{
         alert('全部！');
     };
 
+    _cancelledAction=()=>{
+        alert('已取消');
+    };
+
+    _tobeEvaluated=()=>{
+        alert('待评价');
+    };
+
     _rowPress=(item)=>{
+
+        switch (item.type)
+        {
+            case MeItemTypes.ME_ALL_ORDER:{
+                console.log('全部订单。。。。');
+
+                break;
+            }
+
+            case MeItemTypes.ME_Manage_ADDR:{
+                break;
+            }
+
+            case MeItemTypes.ME_FEED_BACK : {
+                break;
+            }
+
+            case MeItemTypes.ME_ABOUT_US :{
+                break;
+            }
+            default:
+                break;
+        }
+
         alert(item.title);
     };
 
@@ -80,14 +127,9 @@ class MeScreen extends Component{
                                  onPress={this._pendingPaymentAction}
                 >
                 </OrderHandleItem>
-                <OrderHandleItem title='待发货'
-                                 image={Images.Me.To_be_shipped}
-                                 onPress={this._tobeshippedAction}
-                >
-                </OrderHandleItem>
-                <OrderHandleItem title='已发货'
+                <OrderHandleItem title='待收货'
                                  image={Images.Me.Shipped}
-                                 onPress={this._shippedAction}
+                                 onPress={this._tobeReceivedAction}
                 >
                 </OrderHandleItem>
                 <OrderHandleItem title='已完成'
@@ -95,9 +137,14 @@ class MeScreen extends Component{
                                  onPress={this._completedOrderAction}
                 >
                 </OrderHandleItem>
-                <OrderHandleItem title='全部'
-                                 image={Images.Me.Order_All}
-                                 onPress={this._allOrderAction}
+                <OrderHandleItem title='已取消'
+                                 image={Images.Me.Cancelled}
+                                 onPress={this._cancelledAction}
+                >
+                </OrderHandleItem>
+                <OrderHandleItem title='待评价'
+                                 image={Images.Me.Evaluate}
+                                 onPress={this._tobeEvaluated}
                 >
                 </OrderHandleItem>
             </View>

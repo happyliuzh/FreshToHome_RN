@@ -27,6 +27,8 @@ export default {
         Shipped         : require('./res/Me/shipped.png'),
         Order_Completed : require('./res/Me/completed.png'),
         Order_All       : require('./res/Me/order_all.png'),
+        Cancelled       : require('./res/Me/cancelled.png'),
+        Evaluate        : require('./res/Me/evaluate.png'),
     },
 
     Common : {

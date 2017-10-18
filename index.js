@@ -17,4 +17,4 @@ export default class FreshToHome extends Component{
 
 }
 
-AppRegistry.registerComponent('FreshToHome', () => FreshToHome);
+// AppRegistry.registerComponent('FreshToHome', () => FreshToHome);
