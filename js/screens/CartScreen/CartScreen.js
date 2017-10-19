@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
 import {View,
     Text,
-    StyleSheet
 } from 'react-native'
 
-import CommonStyles from '../../utils/css/styles'
+import ScrollableTabView, {DefaultTabBar,} from 'react-native-scrollable-tab-view'
+
 
 export default class CartScreen extends Component{
 
@@ -14,9 +14,16 @@ export default class CartScreen extends Component{
 
     render(){
         return(
-        <View style={CommonStyles.center_layout_container}>
-            <Text>Cart Screen</Text>
-        </View>
+
+            <ScrollableTabView
+                style={{marginTop: 20, }}
+                initialPage={1}
+                renderTabBar={() => <DefaultTabBar />}
+                >
+                <Text tabLabel='Tab #1'>My</Text>
+                <Text tabLabel='Tab #2'>favorite</Text>
+                <Text tabLabel='Tab #3'>project</Text>
+            </ScrollableTabView>
         );
     };
 }
