@@ -1,6 +1,23 @@
 
-RN0.44版本，支持
 
-react-native-root-toast,
-react-native-root-modal,
+react-native-root-toast, react-native-root-modal， RN 0.44版本支持。
+
+react-native-ultimate-listview ^3.2.4，>= 0.43.0 use latest,< 0.43.0 use @3.0.2
+
+react-native-splash-screen 3.0.1，>= 0.47.0 use v3.+,< 0.47.0 use v2.1.0
+
+react-native-easy-toast，没有版本要求
+
+react-native-scrollable-tab-view，没有版本要求
+
+react-native-storage，没有版本要求。
+
+react-native-vector-icons， 没有版本要求。
+
+react-navigation，没有版本要求。
+
+react-redux，redux，redux-thunk， 没有版本要求。
+
+whatwg-fetch，没有版本要求。
+
 
