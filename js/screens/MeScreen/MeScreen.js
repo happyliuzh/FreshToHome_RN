@@ -111,6 +111,7 @@ class MeScreen extends Component{
         // alert(item.title);
 
         this.refs.toast.show(item.title);
+        console.log(item.title);
 
     };
 
