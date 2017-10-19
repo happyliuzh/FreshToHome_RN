@@ -183,7 +183,7 @@ class MeScreen extends Component{
         }
 
         return (
-            <TouchableNativeFeedback onPress={()=>{alert('123'); }}>
+            <TouchableNativeFeedback onPress={ this._rowPress.bind(this,item.item) }>
                 <View style={MeStyles.listViewRow}>
 
                     <Text style={{marginLeft:20, fontSize:16}}>

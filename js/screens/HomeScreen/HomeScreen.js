@@ -43,7 +43,7 @@ export default class HomeScreen extends Component{
             <Image style={[homeStyles.image,homeStyles.wideImage,homeStyles.largeImage]} source={Images.WebImage.Http_Image}></Image>
 
 
-            <Button title="点我进入详情-》" onPress= {() => navigate('Detail',{params : "hello are you detail screen?"})}/>
+            <Button title="点我进入详情-----》" onPress= {() => navigate('Detail',{params : "hello are you detail screen?"})}/>
         </View>
         );
     }
