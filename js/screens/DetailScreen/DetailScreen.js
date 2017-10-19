@@ -29,7 +29,14 @@ export default class DetailScreen extends Component{
 
         return(
         <View style={CommonStyles.center_layout_container}>
-            <Button title={params.params} onPress={()=>{alert("yes , i am !")}}></Button>
+            <Button title={params.params} onPress={
+                ()=>{
+
+                    const { navigate } = this.props.navigation;
+                    // navigate.goback();
+                    alert("yes , i am !")
+                }}
+            ></Button>
         </View>
         );
     }

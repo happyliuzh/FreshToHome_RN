@@ -1,6 +1,6 @@
 
 
-react-native-root-toast, react-native-root-modal， RN 0.44版本支持。
+react-native-root-toast, react-native-root-modal，react-native-indicator， RN 0.44版本支持。
 
 react-native-ultimate-listview ^3.2.4，>= 0.43.0 use latest,< 0.43.0 use @3.0.2
 
@@ -21,5 +21,7 @@ react-navigation，没有版本要求。
 react-redux，redux，redux-thunk， 没有版本要求。
 
 whatwg-fetch，没有版本要求。
+
+react-native-loading-spinner-overlay，没有版本要求。
 
 

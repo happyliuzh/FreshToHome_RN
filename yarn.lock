@@ -3396,6 +3396,14 @@ react-native-easy-toast@^1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/react-native-easy-toast/-/react-native-easy-toast-1.0.8.tgz#ab12ca9c1d3aa8a3b3731d673068ec145d2305c2"
 
+react-native-indicator@^0.6.8:
+  version "0.6.8"
+  resolved "https://registry.yarnpkg.com/react-native-indicator/-/react-native-indicator-0.6.8.tgz#3be3c794175bf27ea2f8632c47a12240bd0ab056"
+
+react-native-loading-spinner-overlay@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/react-native-loading-spinner-overlay/-/react-native-loading-spinner-overlay-0.5.2.tgz#b7bcd277476d596615fd7feee601789f9bdc7acc"
+
 react-native-scrollable-tab-view@^0.8.0:
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/react-native-scrollable-tab-view/-/react-native-scrollable-tab-view-0.8.0.tgz#5cb1fcfce07bf530a3c81ab51fc5071144edac5c"
