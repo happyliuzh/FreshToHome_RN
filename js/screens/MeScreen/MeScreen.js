@@ -12,6 +12,13 @@ import {View,
 
 import ToastComponent from '../../utils/toast/easyToast'
 
+import { PulseLoader } from 'react-native-indicator'
+
+import Toast from 'react-native-root-toast'
+
+import Modal from 'react-native-root-modal'
+
+import Colors from '../../utils/color'
 
 
 //redux 绑定
@@ -213,6 +220,8 @@ class MeScreen extends Component{
         return(
         <View style = {CommonStyles.top_layout_container}>
 
+            <PulseLoader frequency={1000} size={90} color={Colors.MainColor} style={{alignSelf : 'center'}}/>
+
             <FlatList style={MeStyles.flatList}
 
                       refreshing={this.props.refreshing}
@@ -248,6 +257,7 @@ class MeScreen extends Component{
             {
                 ToastComponent()
             }
+
         </View>
         );
     };
