@@ -8,6 +8,8 @@ import {View,
 import CommonStyles from '../../utils/css/styles'
 import Images from '../../utils/image'
 
+import Storage from '../../utils/persistance/storage'
+
 
 
 export default class HomeScreen extends Component{
@@ -16,6 +18,16 @@ export default class HomeScreen extends Component{
         title: '生鲜货架',
         headerBackTitle : '返回',
     };
+
+    componentWillMount(){
+
+        console.log('Home Screen will mount');
+    }
+
+    componentDidMount(){
+
+        console.log('Home Screen did mount');
+    }
 
     render(){
         const { navigate } = this.props.navigation;
