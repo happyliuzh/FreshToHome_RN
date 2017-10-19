@@ -9,6 +9,11 @@ import {View,
     Platform,
 } from 'react-native'
 
+
+import ToastComponent from '../../utils/toast/easyToast'
+
+
+
 //redux 绑定
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
@@ -103,7 +108,10 @@ class MeScreen extends Component{
                 break;
         }
 
-        alert(item.title);
+        // alert(item.title);
+
+        this.refs.toast.show(item.title);
+
     };
 
 
@@ -236,6 +244,9 @@ class MeScreen extends Component{
 
             >
             </FlatList>
+            {
+                ToastComponent()
+            }
         </View>
         );
     };
