@@ -20,7 +20,8 @@ export default class CartScreen extends Component{
 
             <View style = {CommonStyles.top_layout_container}>
                 <CartDefaultHint onPress={() => {
-                    alert('去逛');
+                    const { navigate } = this.props.navigation;
+                    alert(navigate);
 
                 }}>
 
