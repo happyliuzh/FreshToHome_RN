@@ -3508,6 +3508,10 @@ react-native-loading-spinner-overlay@^0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/react-native-loading-spinner-overlay/-/react-native-loading-spinner-overlay-0.5.2.tgz#b7bcd277476d596615fd7feee601789f9bdc7acc"
 
+react-native-looped-carousel@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/react-native-looped-carousel/-/react-native-looped-carousel-0.1.7.tgz#9e81aec732039250568e367383d0bd70ba4173e9"
+
 react-native-root-modal@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/react-native-root-modal/-/react-native-root-modal-1.4.0.tgz#632aab3defd77bf88abdbc8b5dd32f0567dab2ee"
