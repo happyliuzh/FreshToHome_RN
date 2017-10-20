@@ -19,7 +19,10 @@ export default class CartScreen extends Component{
         return(
 
             <View style = {CommonStyles.top_layout_container}>
-                <CartDefaultHint>
+                <CartDefaultHint onPress={() => {
+                    alert('去逛');
+
+                }}>
 
                 </CartDefaultHint>
             </View>

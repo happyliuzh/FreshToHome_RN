@@ -7,27 +7,67 @@ import {
     View,
     Image,
     Text,
-    Button,
     StyleSheet,
 } from 'react-native'
 
+import { Button } from 'native-base'
+
 import Colors from '../../../utils/color'
+
+import PropTypes from 'prop-types'
+
+// <Button title="去货架逛逛"
+// color={Colors.MainColor}
+// style={Styles.ButtonStyle}
+// onPress={
+// () => {
+//
+// }
+// } />
 
 export default class CartDefaultHint extends Component
 {
+
+    static propTypes = {
+        onPress : PropTypes.func,
+    }
+
+    static defaultProps = {
+        onPress : () => {
+
+        }
+    }
+
     render(){
         return (
             <View style={Styles.container}>
                 <Text style={Styles.BigText}>菜篮子饿瘪了 T.T</Text>
                 <Text style={Styles.SmallText}>快给我挑点宝贝</Text>
-                <Button title="去货架逛逛"
-                        color={Colors.MainColor}
-                        style={Styles.ButtonStyle}
-                        onPress={
-                    () => {
 
-                    }
-                } />
+                <Button bordered
+                        color={Colors.MainColor}
+                        style={{
+                            marginTop : 30,
+                            width:120,
+                            height:40,
+                            backgroundColor : '#fff',
+                            alignSelf : 'center',
+                            justifyContent:'center',
+                            alignItems:'center',
+                            borderColor: Colors.MainColor,
+                        }}
+                        onPress={
+                           this.props.onPress
+                        }
+
+                >
+                    <Text style={{
+                        color : Colors.MainColor,
+                        fontSize : 16,
+                    }}>
+                        去货架逛逛
+                    </Text>
+                </Button>
             </View>
         );
     }
@@ -60,7 +100,7 @@ const Styles = StyleSheet.create({
             borderColor : Colors.MainColor,
             borderWidth : 2,
             width : 100,
-            height : 30,
+            height : 40,
         }
     }
 );
