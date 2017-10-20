@@ -58,7 +58,7 @@ export default class DetailScreen extends Component{
         const { navigate } = this.props.navigation;
 
         return(
-            <View style={CommonStyles.center_layout_container}>
+            <View style={CommonStyles.top_layout_container}>
                 {
                     RefreshLoader()
                 }

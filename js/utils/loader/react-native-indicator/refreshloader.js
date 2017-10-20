@@ -2,35 +2,71 @@
  * Created by liuzhihui on 2017/10/20.
  */
 
-import { BubblesLoader } from 'react-native-indicator'
-import React , { Component } from 'react'
+import {
+    BubblesLoader,
+    LinesLoader
+} from 'react-native-indicator'
+
+import React from 'react'
 import Colors from '../../color'
-import DimensionUtil from '../../dimension'
+import {
+    View,
+    Text,
+} from 'react-native'
 
-
-// export default class RefreshLoader extends Component
-// {
-//     render(){
-//       return (
-//           <BubblesLoader color={Colors.MainColor}
-//                          size={40} dotRadius={8}
-//                          style={{
-//                              marginTop : DimensionUtil.ScreenHeight - 200,
-//                              marginLeft: (DimensionUtil.ScreenWidth - 40) / 2.0,
-//               }}/>
-//       );
-//     };
-// }
 
 export default refreshLoader = ()=>{
 
     return (
-        <BubblesLoader color={Colors.MainColor}
-                       size={40} dotRadius={8}
-                       style={{
 
-                           marginTop : (DimensionUtil.ScreenHeight - 40) / 2.0,
-                           marginLeft: (DimensionUtil.ScreenWidth - 40) / 2.0,
-                       }}/>
+        <View style={{
+            flex : 1,
+            justifyContent:'center',
+            alignItems:'center'
+        }}
+
+        >
+            {
+                _renderLinesLoader()
+            }
+
+            {
+                _renderText()
+            }
+        </View>
+
+    );
+}
+
+_renderBubbllesLoader = () => {
+    return (
+        <BubblesLoader color={Colors.MainColor}
+                       size={60}
+                       dotRadius={8}
+        />
+    );
+}
+
+_renderLinesLoader = ()=> {
+    return (
+        <LinesLoader color = {Colors.MainColor}
+                     betweenSpace = {2}
+                     barNumber = {5}
+                     barWidth = {5}
+                     barHeight = {40}
+        />
+    );
+}
+
+_renderText = () => {
+
+    return (
+        <Text style={{
+            marginTop : 10,
+            color : Colors.MainColor}}
+        >
+            加载中
+        </Text>
+
     );
 }
