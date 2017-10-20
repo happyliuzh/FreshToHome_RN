@@ -70,7 +70,7 @@ const tabBarNavigatorApp = TabNavigator({
         Cart : {
             screen : CartScreen,
             navigationOptions : {
-                tabBarLabel : '购物车',
+                tabBarLabel : '菜篮子',
                 tabBarIcon: (({tintColor,focused}) => {
                     return(
                         <Icon name="ios-cart" size={30} color={tintColor} style={{marginLeft:-5}} />

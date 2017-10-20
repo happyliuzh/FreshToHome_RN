@@ -12,7 +12,7 @@ import CommonStyles from '../../utils/css/styles'
 export default class CartScreen extends Component{
 
     static navigationOptions = {
-        title : "购物车"
+        title : "菜篮子"
     };
 
     render(){
