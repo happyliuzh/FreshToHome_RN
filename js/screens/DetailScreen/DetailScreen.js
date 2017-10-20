@@ -11,7 +11,18 @@ import { PulseLoader } from 'react-native-indicator'
 
 import Colors from '../../utils/color'
 
+
+
 export default class DetailScreen extends Component{
+
+    constructor()
+    {
+        super();
+
+        this.state = {
+            loading : true,
+        };
+    }
 
     static navigationOptions = {
         title : "商品详情",
@@ -35,21 +46,17 @@ export default class DetailScreen extends Component{
         <View style={CommonStyles.center_layout_container}>
 
 
-            <Spinner visible={true}
-
-                     overlayColor='rgba(0,0,0,0)'
-                     size='large' cancelable={true}
-                     style={{
-                         display:'flex',
-                         flexDirection:'column',
-                         alignItems:'center',
-                         justifyContent:'center',
-                     }}>
-
+            <Spinner visible={this.state.loading}
+                     overlayColor='rgba(0,0,0,0.25)'
+                     cancelable={true}
+                     >
                 <PulseLoader size={90} color={Colors.MainColor} frequency={1000} style={{marginTop:100}}/>
+
+                <Button title="取消加载" onPress={()=>{this.setState({loading : false});}}/>
 
             </Spinner>
         </View>
         );
     }
+
 }
