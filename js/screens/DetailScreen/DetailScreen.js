@@ -6,6 +6,10 @@ import {View,
 } from 'react-native'
 import CommonStyles from '../../utils/css/styles'
 import Icon from 'react-native-vector-icons/Ionicons'
+import Spinner from 'react-native-loading-spinner-overlay'
+import { PulseLoader } from 'react-native-indicator'
+
+import Colors from '../../utils/color'
 
 export default class DetailScreen extends Component{
 
@@ -29,14 +33,22 @@ export default class DetailScreen extends Component{
 
         return(
         <View style={CommonStyles.center_layout_container}>
-            <Button title={params.params} onPress={
-                ()=>{
 
-                    const { navigate } = this.props.navigation;
-                    // navigate.goback();
-                    alert("yes , i am !")
-                }}
-            ></Button>
+
+            <Spinner visible={true}
+
+                     overlayColor='rgba(0,0,0,0)'
+                     size='large' cancelable={true}
+                     style={{
+                         display:'flex',
+                         flexDirection:'column',
+                         alignItems:'center',
+                         justifyContent:'center',
+                     }}>
+
+                <PulseLoader size={90} color={Colors.MainColor} frequency={1000} style={{marginTop:100}}/>
+
+            </Spinner>
         </View>
         );
     }

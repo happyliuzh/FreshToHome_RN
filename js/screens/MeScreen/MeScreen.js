@@ -18,6 +18,9 @@ import Toast from 'react-native-root-toast'
 
 import Modal from 'react-native-root-modal'
 
+import Spinner from 'react-native-loading-spinner-overlay';
+
+
 import Colors from '../../utils/color'
 
 
@@ -215,12 +218,13 @@ class MeScreen extends Component{
     };
 
 
+ //<PulseLoader frequency={1000} size={90} color={Colors.MainColor} style={{alignSelf : 'center'}}/>
 
-    render(){
+
+render(){
         return(
         <View style = {CommonStyles.top_layout_container}>
 
-            <PulseLoader frequency={1000} size={90} color={Colors.MainColor} style={{alignSelf : 'center'}}/>
 
             <FlatList style={MeStyles.flatList}
 
