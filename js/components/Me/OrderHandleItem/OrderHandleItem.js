@@ -12,6 +12,7 @@ import {View,
     TouchableOpacity,
 } from 'react-native'
 import PropTypes from 'prop-types';
+import Colors from '../../../utils/color'
 
 export default class OrderHandleItem extends Component{
 
@@ -32,7 +33,11 @@ export default class OrderHandleItem extends Component{
                     <View style={{flex : 1, alignItems : 'center', justifyContent : 'center'}}>
                         <Image
                             source={this.props.image}
-                            style={{width:30,height:30}}
+                            style={{
+                                width:30,
+                                height:30,
+                                tintColor:Colors.MainColor
+                            }}
                             resizeMode='cover'>
                         </Image>
                         <Text style={{marginTop:10, color : '#333333'}}>

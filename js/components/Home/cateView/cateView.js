@@ -25,7 +25,7 @@ export default class HomeListView extends Component
 
     _renderHeader = ()=>{
 
-        // return null;
+        return null;
 
         return (
 

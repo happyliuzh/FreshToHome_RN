@@ -4,17 +4,15 @@ import {View,
     StyleSheet,
     Button,
     Image,
+    ScrollView,
+    RefreshControl,
 } from 'react-native'
 import CommonStyles from '../../utils/css/styles'
-import HomeListView from '../../components/Home/homeListView'
 
+import Colors from '../../utils/color'
+import CarouselView from "../../components/Home/carouseView";
 import Images from '../../utils/image'
-
-import UltimateListView from 'react-native-ultimate-listview'
-
-
-import Storage from '../../utils/persistance/storage'
-
+import HomeView from '../../components/Home/homeView'
 
 // <Image style={homeStyles.image} source={Images.TabIcon.Run_Image_F}></Image>
 // <Image style={homeStyles.image} source={Images.TabIcon.Run_Image_S}></Image>
@@ -28,8 +26,6 @@ import Storage from '../../utils/persistance/storage'
 // <Button title="点我进入详情-----》" onPress= {() => navigate('Detail',{params : "hello are you detail screen?"})}/>
 
 
-
-// <HomeListView/>
 
 
 export default class HomeScreen extends Component{
@@ -51,11 +47,13 @@ export default class HomeScreen extends Component{
 
     render(){
         const { navigate } = this.props.navigation;
-        return(
-        <View style={[CommonStyles.center_layout_container, homeStyles.container]}>
-            <HomeListView/>
-        </View>
+
+        return (
+            <HomeView>
+
+            </HomeView>
         );
+
     }
 }
 
@@ -66,17 +64,4 @@ const homeStyles = StyleSheet.create({
         justifyContent : 'flex-start'
     },
 
-    image : {
-        width : 40,
-        height : 40,
-    },
-
-    wideImage : {
-        width:100,
-    },
-
-    largeImage : {
-        marginTop : 20,
-        height    : 100,
-    }
 });

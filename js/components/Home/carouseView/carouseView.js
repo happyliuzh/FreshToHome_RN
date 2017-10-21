@@ -18,7 +18,7 @@ import PropTypes from 'prop-types'
 
 const { width } = Dimensions.get('window');
 
-const size = {width, height : 140 }
+const size = {width, height : width/3.0 }
 
 
 export default class CarouselView extends Component
