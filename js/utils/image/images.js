@@ -31,6 +31,16 @@ export default {
         Evaluate        : require('./res/Me/evaluate.png'),
     },
 
+    Home : {
+
+        HomeCates       : require('./res/Home/homeCates.png'),
+        Meat            : require('./res/Home/meat.png'),
+        Fruit           : require('./res/Home/fruit.png'),
+        Vegatable       : require('./res/Home/vegatable.png'),
+        Fish            : require('./res/Home/fish.png'),
+
+    },
+
     Common : {
         ArrowRight      : require('./res/Common/arrow_right.png'),
     },

@@ -10,6 +10,9 @@ import {
 } from 'react-native'
 
 import CarouseView from '../carouseView'
+import HomeCateView from '../cateView'
+
+
 
 
 export default class HomeHeaderView extends Component{
@@ -20,6 +23,11 @@ export default class HomeHeaderView extends Component{
                 <CarouseView>
 
                 </CarouseView>
+
+                <HomeCateView>
+
+                </HomeCateView>
+
             </View>
         );
     }
