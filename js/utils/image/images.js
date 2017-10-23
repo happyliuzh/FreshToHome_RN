@@ -38,6 +38,7 @@ export default {
         Fruit           : require('./res/Home/fruit.png'),
         Vegatable       : require('./res/Home/vegatable.png'),
         Fish            : require('./res/Home/fish.png'),
+        HotSale         : require('./res/Home/hotSale.png'),
 
     },
 

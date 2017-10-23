@@ -15,64 +15,9 @@ import {
 }  from 'react-native'
 
 import Colors from '../../../utils/color'
-import CarouselView from '../carouseView'
+
 import HomeHeaderView from '../homeHeaderView'
 
-// <Image style={homeStyles.image} source={Images.TabIcon.Run_Image_F}></Image>
-// <Image style={homeStyles.image} source={Images.TabIcon.Run_Image_S}></Image>
-// <Image style={homeStyles.image} source={Images.TabIcon.Me_Image_F}></Image>
-// <Image style={homeStyles.image} source={Images.TabIcon.Me_Image_S}></Image>
-//
-// <Image style={[homeStyles.image,homeStyles.wideImage]} source={Images.WebImage.BaiduLogo_Image}></Image>
-// <Image style={[homeStyles.image,homeStyles.wideImage,homeStyles.largeImage]} source={Images.WebImage.Http_Image}></Image>
-//
-//
-// <Button title="点我进入详情-----》" onPress= {() => navigate('Detail',{params : "hello are you detail screen?"})}/>
-//
-// <Image style={homeStyles.image} source={Images.TabIcon.Run_Image_F}></Image>
-// <Image style={homeStyles.image} source={Images.TabIcon.Run_Image_S}></Image>
-// <Image style={homeStyles.image} source={Images.TabIcon.Me_Image_F}></Image>
-// <Image style={homeStyles.image} source={Images.TabIcon.Me_Image_S}></Image>
-//
-// <Image style={[homeStyles.image,homeStyles.wideImage]} source={Images.WebImage.BaiduLogo_Image}></Image>
-// <Image style={[homeStyles.image,homeStyles.wideImage,homeStyles.largeImage]} source={Images.WebImage.Http_Image}></Image>
-
-
-
-// <View style = {homeViewStyles.container}>
-// <ScrollView style={homeViewStyles.scrollViewContainer}
-// contentContainerStyle={{
-//     justifyContent:'flex-start',
-//         alignItems : 'stretch',
-// }}
-// refreshControl={
-// <RefreshControl refreshing={false}/>
-// }
-//
-// >
-// <CarouselView/>
-//
-// <Text>1</Text>
-// <Text>1</Text>
-//
-// <Text>1</Text>
-// <Text>1</Text>
-//
-//
-//
-// </ScrollView>
-// </View>
-
-// <SectionList ListHeaderComponent={
-//
-// <HomeHeaderView>
-//
-// </HomeHeaderView>
-// }
-//
-// >
-//
-// </SectionList>
 
 export default class HomeView extends Component
 {
@@ -133,6 +78,7 @@ export default class HomeView extends Component
 
                              }}
                              refreshing={false}
+
                 >
 
                 </SectionList>
