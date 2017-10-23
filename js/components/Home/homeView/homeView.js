@@ -58,8 +58,9 @@ export default class HomeView extends Component
     render(){
 
         const sections = [
-            { key: "今日热卖", data: [
-
+            {
+                key: "今日热卖",
+                data: [
                 { title: "阿童木" },
                 { title: "阿玛尼" },
                 { title: "爱多多" },

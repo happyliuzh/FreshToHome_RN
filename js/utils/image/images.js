@@ -44,6 +44,7 @@ export default {
 
     Common : {
         ArrowRight      : require('./res/Common/arrow_right.png'),
+        ShoppingCart    : require('./res/Common/shoppingCart.png'),
     },
 
     NativeImage : {
