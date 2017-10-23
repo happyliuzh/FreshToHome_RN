@@ -11,6 +11,7 @@ import {
     ScrollView,
     RefreshControl,
     SectionList,
+    TouchableOpacity,
 
 }  from 'react-native'
 
@@ -73,6 +74,20 @@ export default class HomeView extends Component
     _listFooter = () => {
 
         return <HomeFooterView/>
+
+        // const { navigate } = this.props.navigation;
+
+        return (
+            <TouchableOpacity onPress={
+                () => {
+                    // navigate('Zone');
+                }
+            }>
+                <HomeFooterView/>
+            </TouchableOpacity>
+        );
+
+
 
     }
 

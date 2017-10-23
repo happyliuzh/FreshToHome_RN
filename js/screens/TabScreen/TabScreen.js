@@ -13,6 +13,7 @@ import HomeScreen from '../HomeScreen'
 import DetailScreen from '../DetailScreen'
 import CartScreen from '../CartScreen'
 import MeScreen from '../MeScreen'
+import ZoneScreen from '../ZoneScreen'
 
 import Icon from 'react-native-vector-icons/Ionicons'
 
@@ -136,6 +137,12 @@ const composeTabAndStackNavigatorApp = StackNavigator({
     },
     Detail : {
         screen : DetailScreen,
+        navigationOptions : {
+            headerTintColor : Colors.MainColor,
+        }
+    },
+    Zone : {
+        screen : ZoneScreen,
         navigationOptions : {
             headerTintColor : Colors.MainColor,
         }

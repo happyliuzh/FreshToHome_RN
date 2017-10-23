@@ -13,6 +13,7 @@ import {
 
 import UltimateListView from 'react-native-ultimate-listview'
 import CarouselView from '../carouseView'
+import DetailListItem from '../../Util/zoneListItem'
 
 export default class CateListView extends Component
 {
@@ -52,6 +53,12 @@ export default class CateListView extends Component
 
     _renderItem = (item, index, separator) => {
 
+        return (
+
+            <DetailListItem>
+
+            </DetailListItem>
+        );
         return (
             <Text>
                 cell + {index}

@@ -21,7 +21,7 @@ export default class HomeFooterView extends Component{
                 </Text>
 
                 <Text style={Styles.text}>
-                    请关注"新鲜到家喽"公众号
+                    请关注"新鲜到家喽"微信公众号
                 </Text>
             </View>
         );
