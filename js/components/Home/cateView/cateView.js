@@ -16,6 +16,8 @@ import HomeCateItem from '../cateItem'
 import Colors from '../../../utils/color'
 import Images from '../../../utils/image'
 
+import ItemHeader from '../../Util/itemHeader'
+
 const data = [
     {
         type : 1,
@@ -50,29 +52,13 @@ export default class HomeCateView extends Component
 
     //UI
 
-    _renderHeaderView(){
-        return (
-            <View style = {{
-                flexDirection : 'row',
-                alignItems : 'center',
-                paddingTop : 10,
-                paddingBottom : 10,
-            }}>
-
-                <Image source={Images.Home.HomeCates} style={Styles.headerImage}/>
-                <Text style={Styles.headerText}>
-                    货架分类
-                </Text>
-            </View>
-        );
-    }
-
     render(){
         return (
             <View>
-                {
-                    this._renderHeaderView()
-                }
+
+                <ItemHeader leftImg={Images.Home.HomeCates} leftTitle='货架分类'>
+
+                </ItemHeader>
 
                 <View style = {Styles.itemWrap}>
 
