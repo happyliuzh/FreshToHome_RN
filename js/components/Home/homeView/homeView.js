@@ -15,8 +15,9 @@ import {
 }  from 'react-native'
 
 import Colors from '../../../utils/color'
-
+import Images from '../../../utils/image'
 import HomeHeaderView from '../homeHeaderView'
+import ItemHeader from '../../Util/itemHeader'
 
 
 export default class HomeView extends Component
@@ -26,7 +27,7 @@ export default class HomeView extends Component
 
         var txt = '  ' + info.item.title;
 
-        return <View>
+        return <View style = {{height : 44, alignItems : 'center'}}>
                     <Text>
                         {txt}
                     </Text>
@@ -35,16 +36,17 @@ export default class HomeView extends Component
 
     };
 
-    _renderHeader = (info) => {
+    _renderSectionHeader = (info) => {
 
         var txt = info.section.key;
 
+        return (
 
-        return <View>
-            <Text>
-                {txt}
-            </Text>
-            </View>
+            <ItemHeader leftTitle = { info.section.key } leftImg={Images.Home.HotSale}>
+
+            </ItemHeader>
+        );
+
 
 
     };
@@ -56,22 +58,67 @@ export default class HomeView extends Component
     render(){
 
         const sections = [
-            { key: "A", data: [{ title: "阿童木" }, { title: "阿玛尼" }, { title: "爱多多" }] },
-            { key: "B", data: [{ title: "表哥" }, { title: "贝贝" }, { title: "表弟" }, { title: "表姐" }, { title: "表叔" }] },
-            { key: "C", data: [{ title: "成吉思汗" }, { title: "超市快递" }] },
-            { key: "W", data: [{ title: "王磊" }, { title: "王者荣耀" }, { title: "往事不能回味" },{ title: "王小磊" }, { title: "王中磊" }, { title: "王大磊" }] },
-            { key: "Q", data: [{ title: "王磊" }, { title: "王者荣耀" }, { title: "往事不能回味" },{ title: "王小磊" }, { title: "王中磊" }, { title: "王大磊" }] },
-            { key: "Z", data: [{ title: "王磊" }, { title: "王者荣耀" }, { title: "往事不能回味" },{ title: "王小磊" }, { title: "王中磊" }, { title: "王大磊" }] },
-            { key: "T", data: [{ title: "王磊" }, { title: "王者荣耀" }, { title: "往事不能回味" },{ title: "王小磊" }, { title: "王中磊" }, { title: "王大磊" }] },
+            { key: "今日热卖", data: [
 
+                { title: "阿童木" },
+                { title: "阿玛尼" },
+                { title: "爱多多" },
+                { title: "表哥" },
+                { title: "贝贝" },
+                { title: "表弟" },
+                { title: "表姐" },
+                { title: "表叔" },
+                { title: "成吉思汗" },
+                { title: "超市快递" },
+                { title: "王磊" },
+                { title: "王者荣耀" },
+                { title: "往事不能回味" },
+                { title: "王小磊" },
+                { title: "王中磊" },
+                { title: "王大磊" },
+                { title: "阿童木" },
+                { title: "阿玛尼" },
+                { title: "爱多多" },
+                { title: "表哥" },
+                { title: "贝贝" },
+                { title: "表弟" },
+                { title: "表姐" },
+                { title: "表叔" },
+                { title: "成吉思汗" },
+                { title: "超市快递" },
+                { title: "王磊" },
+                { title: "王者荣耀" },
+                { title: "往事不能回味" },
+                { title: "王小磊" },
+                { title: "王中磊" },
+                { title: "王大磊" },
+                { title: "阿童木" },
+                { title: "阿玛尼" },
+                { title: "爱多多" },
+                { title: "表哥" },
+                { title: "贝贝" },
+                { title: "表弟" },
+                { title: "表姐" },
+                { title: "表叔" },
+                { title: "成吉思汗" },
+                { title: "超市快递" },
+                { title: "王磊" },
+                { title: "王者荣耀" },
+                { title: "往事不能回味" },
+                { title: "王小磊" },
+                { title: "王中磊" },
+                { title: "王大磊" },
+
+            ] },
         ];
 
         return (
+
             <View style = {homeViewStyles.container}>
 
                 <SectionList sections={sections}
                              renderItem={this._renderRow}
-                             renderSectionHeader = {this._renderHeader}
+                             renderSectionHeader = {this._renderSectionHeader}
                              keyExtractor={(item, index) => {return index + '';}}  //this is required when you are using FlatList
                              ListHeaderComponent={this._listHeader}
                              onRefresh = {()=>{

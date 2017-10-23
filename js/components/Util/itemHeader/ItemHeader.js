@@ -110,6 +110,7 @@ const Styles = StyleSheet.create({
         flexDirection : 'row',
         justifyContent : 'space-between',
         marginTop : 10,
+        marginBottom : 5,
     },
 
     left : {
