@@ -72,6 +72,8 @@ export default class HomeCateItem extends Component
 
         const type = this.props.itemType;
 
+        alert('去' + this.props.title + '区');
+
         switch (type)
         {
             case 1:

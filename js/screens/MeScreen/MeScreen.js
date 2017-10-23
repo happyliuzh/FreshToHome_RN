@@ -245,7 +245,7 @@ render(){
 
                       ListHeaderComponent={this.listHeader}
 
-                      keyExtractor={(item, index) => {return index;}}  //使用json中的title动态绑定key
+                      keyExtractor={(item, index) => {return index;}}
 
                       data = {this.state.dataSource} //数据源
                       renderItem = {(item) => this.renderRow(item)} //每一行render

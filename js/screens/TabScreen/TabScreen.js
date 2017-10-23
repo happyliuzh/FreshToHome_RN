@@ -23,6 +23,8 @@ import Colors from '../../utils/color'
 
 function _swipeEnable() {
 
+    return false;
+
     if(Platform.OS === 'ios')
     {
         return true;

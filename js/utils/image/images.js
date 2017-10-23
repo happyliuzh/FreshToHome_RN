@@ -42,9 +42,15 @@ export default {
 
     },
 
+    Test : {
+
+        TestVegatable   : require('./res/Test/vegetable.jpeg'),
+    },
+
     Common : {
         ArrowRight      : require('./res/Common/arrow_right.png'),
         ShoppingCart    : require('./res/Common/shoppingCart.png'),
+        PointRight      : require('./res/Common/point_right.png'),
     },
 
     NativeImage : {
