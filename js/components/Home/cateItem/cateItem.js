@@ -9,6 +9,7 @@ import {
     Dimensions,
     Image,
     Text,
+    TouchableOpacity,
 } from 'react-native'
 
 
@@ -32,7 +33,7 @@ export default class HomeCateItem extends Component
     }
 
 
-    _getImage()
+    _getImage = () =>
     {
         const type = this.props.itemType;
 
@@ -67,8 +68,45 @@ export default class HomeCateItem extends Component
         }
     }
 
+    _onItemPressed = () => {
+
+        const type = this.props.itemType;
+
+        switch (type)
+        {
+            case 1:
+            {
+                break;
+            }
+
+            case 2:
+            {
+                break;
+            }
+
+            case 3:
+            {
+                break;
+            }
+
+            case 4:
+            {
+                break;
+            }
+
+            default:{
+
+
+                break;
+            }
+        }
+
+    }
+
     render(){
         return (
+        <TouchableOpacity onPress={ this._onItemPressed }
+        >
             <View style = { Styles.container }>
 
                 {
@@ -79,6 +117,8 @@ export default class HomeCateItem extends Component
                 </Text>
 
             </View>
+        </TouchableOpacity>
+
         );
     }
 }
