@@ -21,23 +21,23 @@ import ItemHeader from '../../Util/itemHeader'
 const data = [
     {
         type : 1,
-        title : '蔬菜',
+        title : '蔬菜区',
     },
 
     {
         type : 2,
-        title : '肉蛋',
+        title : '肉蛋区',
 
     },
 
     {
         type : 3,
-        title : '生鲜',
+        title : '生鲜区',
 
     },
     {
         type : 4,
-        title : '水果',
+        title : '水果区',
 
     },
 ];

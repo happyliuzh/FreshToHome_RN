@@ -32,10 +32,14 @@ export default class CarouselView extends Component
 
     }
 
+    _delayTime(){
+        return 10000;
+    }
+
     render(){
         return (
 
-            <Carousel delay={4000}
+            <Carousel delay={this._delayTime()}
                           style={size}
                           autoplay
                           pageInfo
