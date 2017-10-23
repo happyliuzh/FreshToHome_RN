@@ -14,7 +14,7 @@ import {
 import UltimateListView from 'react-native-ultimate-listview'
 import CarouselView from '../carouseView'
 
-export default class HomeCateView extends Component
+export default class CateListView extends Component
 {
 
     constructor(props) {
