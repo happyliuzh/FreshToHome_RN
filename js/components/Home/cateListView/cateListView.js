@@ -14,6 +14,7 @@ import {
 import UltimateListView from 'react-native-ultimate-listview'
 import CarouselView from '../carouseView'
 import DetailListItem from '../../Util/zoneListItem'
+import Loader from '../../../utils/loader'
 
 export default class CateListView extends Component
 {
@@ -45,7 +46,12 @@ export default class CateListView extends Component
 
         let rowData = Array.from({length: pageLimit}, (value, index) => `item -> ${index}`);
 
-        startFetch(rowData, pageLimit);
+        setTimeout(()=> {
+
+            startFetch(rowData, pageLimit);
+
+        }, 2000);
+
 
     }
 
@@ -61,7 +67,13 @@ export default class CateListView extends Component
     };
 
     _renderPaginationFetchingView = () => {
+
         return (
+            <Loader></Loader>
+        );
+
+        return (
+
             <Text>加载中</Text>
         );
     };

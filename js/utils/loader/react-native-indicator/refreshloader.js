@@ -12,7 +12,10 @@ import Colors from '../../color'
 import {
     View,
     Text,
+    Dimensions,
 } from 'react-native'
+
+const { width , height }  = Dimensions.get('window');
 
 
 export default refreshLoader = ()=>{
@@ -20,7 +23,8 @@ export default refreshLoader = ()=>{
     return (
 
         <View style={{
-            flex : 1,
+            width,
+            height : height - 64,
             justifyContent:'center',
             alignItems:'center'
         }}
