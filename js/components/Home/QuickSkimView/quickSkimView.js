@@ -12,7 +12,7 @@ import {
 
 } from 'react-native'
 
-import QuickSkimItem from '../../Util/quickSkimItem'
+import QuickSkimItem from '../../Util/QuickSkimItem'
 import Colors from '../../../utils/color'
 import Images from '../../../utils/image'
 

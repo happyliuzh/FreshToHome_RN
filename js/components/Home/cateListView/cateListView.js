@@ -39,8 +39,6 @@ export default class CateListView extends Component
     }
 
 
-
-
     _onFetch = (page = 1, startFetch, abortFetch)=> {
 
         let pageLimit = 24;
@@ -58,11 +56,6 @@ export default class CateListView extends Component
             <DetailListItem>
 
             </DetailListItem>
-        );
-        return (
-            <Text>
-                cell + {index}
-            </Text>
         );
 
     };
@@ -101,7 +94,7 @@ export default class CateListView extends Component
 
     _renderSeparatorView = () => {
         return (
-            <View style={{height : 10, backgroundColor:'#e50263'}}>
+            <View style={{height : 10, backgroundColor:'#f6f6f6'}}>
 
             </View>
         );

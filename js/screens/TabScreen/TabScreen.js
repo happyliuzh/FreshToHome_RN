@@ -137,16 +137,23 @@ const composeTabAndStackNavigatorApp = StackNavigator({
     },
     Detail : {
         screen : DetailScreen,
-        navigationOptions : {
-            headerTintColor : Colors.MainColor,
-        }
+
     },
     Zone : {
         screen : ZoneScreen,
-        navigationOptions : {
-            headerTintColor : Colors.MainColor,
-        }
+
     }
 });
 
-export default composeTabAndStackNavigatorApp;
+
+// export default composeTabAndStackNavigatorApp;
+
+const testZoomScreen  = StackNavigator({
+
+    Zone  : {
+        screen : ZoneScreen,
+    },
+
+});
+
+export default testZoomScreen;

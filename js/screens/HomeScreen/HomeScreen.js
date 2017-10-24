@@ -63,7 +63,7 @@ export default class HomeScreen extends Component{
         }
 
         return (
-            <HomeView>
+            <HomeView navigation = {this.props.navigation }>
 
             </HomeView>
         );

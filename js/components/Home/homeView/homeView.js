@@ -73,14 +73,14 @@ export default class HomeView extends Component
 
     _listFooter = () => {
 
-        return <HomeFooterView/>
+        // return <HomeFooterView/>
 
-        // const { navigate } = this.props.navigation;
+        const { navigate } = this.props.navigation;
 
         return (
             <TouchableOpacity onPress={
                 () => {
-                    // navigate('Zone');
+                    navigate('Zone');
                 }
             }>
                 <HomeFooterView/>

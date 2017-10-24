@@ -51,6 +51,8 @@ export default class DetailScreen extends Component{
                                             }}>
                       </Button>,
         // headerRight : <Icon.Button></Icon.Button>
+        headerTintColor : Colors.MainColor,
+
     };
 
     render(){
