@@ -42,7 +42,7 @@ export default class CateListView extends Component
 
     _onFetch = (page = 1, startFetch, abortFetch)=> {
 
-        let pageLimit = 24;
+        let pageLimit = 10;
 
         let rowData = Array.from({length: pageLimit}, (value, index) => `item -> ${index}`);
 
@@ -70,11 +70,6 @@ export default class CateListView extends Component
 
         return (
             <Loader></Loader>
-        );
-
-        return (
-
-            <Text>加载中</Text>
         );
     };
 
@@ -121,9 +116,9 @@ export default class CateListView extends Component
                               numColumns={1}
 
                               //是否允许上拉加载更多
-                              pagination={false}
+                              pagination={true}
                               //是否允许下拉刷新
-                              refreshable={false}
+                              refreshable={true}
 
                               displayDate
 
