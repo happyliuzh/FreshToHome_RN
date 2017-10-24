@@ -8,13 +8,16 @@ import {
     StyleSheet,
     Text,
     Platform,
-
+    ActivityIndicator,
 } from 'react-native'
 
 import UltimateListView from 'react-native-ultimate-listview'
 import CarouselView from '../carouseView'
 import DetailListItem from '../../Util/zoneListItem'
 import Loader from '../../../utils/loader'
+import LoaderMore from '../../Util/loaderMore'
+import Colors from '../../../utils/color'
+import ListFooter from '../../Util/listFooter'
 
 export default class CateListView extends Component
 {
@@ -48,7 +51,14 @@ export default class CateListView extends Component
 
         setTimeout(()=> {
 
-            startFetch(rowData, pageLimit);
+            if(page == 2)
+            {
+                startFetch([],pageLimit);
+            }
+            else
+            {
+                startFetch(rowData, pageLimit);
+            }
 
         }, 2000);
 
@@ -75,18 +85,26 @@ export default class CateListView extends Component
 
     _renderPaginationAllLoadedView = () => {
         return (
-            <View style={{alignItems:'center',justifyContent:'center',height : 60}}>
-                <Text>我是有底线的....</Text>
-            </View>
+            <ListFooter>
+
+            </ListFooter>
         );
     };
 
     _renderPaginationWaitingView = () => {
+
+        // return (
+        //     <LoaderMore>
+        //
+        //     </LoaderMore>
+        // );
         return (
             <View style={{alignItems : 'center',justifyContent : 'center',height:44}}>
-                <Text>
-                    加载中
-                </Text>
+
+                <ActivityIndicator>
+
+                </ActivityIndicator>
+
             </View>
         );
     };

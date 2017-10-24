@@ -146,14 +146,5 @@ const composeTabAndStackNavigatorApp = StackNavigator({
 });
 
 
-// export default composeTabAndStackNavigatorApp;
+export default composeTabAndStackNavigatorApp;
 
-const testZoomScreen  = StackNavigator({
-
-    Zone  : {
-        screen : ZoneScreen,
-    },
-
-});
-
-export default testZoomScreen;

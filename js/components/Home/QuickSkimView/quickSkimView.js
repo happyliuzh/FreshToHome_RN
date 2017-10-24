@@ -95,6 +95,7 @@ export default class QuickSkimView extends Component{
                         ListFooterComponent = { this._renderListFooter }
                         horizontal = {true}
                         ref="flatListView"
+                        showsHorizontalScrollIndicator = {false}
             >
 
             </FlatList>
