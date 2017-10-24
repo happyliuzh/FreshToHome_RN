@@ -12,6 +12,9 @@ import {
     TouchableOpacity,
 } from 'react-native'
 
+import { NavigationActions } from 'react-navigation';
+
+
 
 import DimensionUtil from '../../../utils/dimension'
 import Images from '../../../utils/image'
@@ -72,7 +75,14 @@ export default class HomeCateItem extends Component
 
         const type = this.props.itemType;
 
-        alert('去' + this.props.title );
+        const  { dispatch }= this.props;
+
+        dispatch(NavigationActions.navigate({ routeName : 'Zone' }));
+
+
+        // alert(dispatch);
+
+        // alert('去' + this.props.title );
 
         switch (type)
         {
