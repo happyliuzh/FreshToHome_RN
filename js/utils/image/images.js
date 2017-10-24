@@ -51,6 +51,7 @@ export default {
         ArrowRight      : require('./res/Common/arrow_right.png'),
         ShoppingCart    : require('./res/Common/shoppingCart.png'),
         PointRight      : require('./res/Common/point_right.png'),
+        Search          : require('./res/Common/search.png'),
     },
 
     NativeImage : {

@@ -1,11 +1,13 @@
 import React, {Component} from 'react'
-import {View,
+import {
+    View,
     Text,
     StyleSheet,
     Button,
     Image,
     ScrollView,
     RefreshControl,
+    TouchableOpacity,
 } from 'react-native'
 import CommonStyles from '../../utils/css/styles'
 
@@ -24,7 +26,37 @@ export default class HomeScreen extends Component{
 
     static navigationOptions = {
         title: '生鲜货架',
+        headerTitleStyle : { alignSelf : 'center'},
         headerBackTitle : '返回',
+        headerRight:(
+           <TouchableOpacity style = { { marginRight : 16,} }
+                             onPress = { () => {
+                                 alert('常购清单');
+                             }}
+
+           >
+               <Text style={ {
+                   color : Colors.MainColor,
+                   fontSize : 18,
+               } }>
+                   常购清单
+               </Text>
+           </TouchableOpacity>
+       ),
+
+
+        headerLeft : (
+            <TouchableOpacity style = { { marginLeft : 16}}
+                              onPress = { () => {
+                                  alert('搜索');
+                              }}
+            >
+                <Image source={ require('../../utils/image/res/Common/search.png') } style={{
+                    width : 24,
+                    height : 24,
+                }}/>
+            </TouchableOpacity>
+        )
     };
 
     constructor(){
@@ -77,5 +109,11 @@ const homeStyles = StyleSheet.create({
     container : {
         justifyContent : 'flex-start'
     },
+
+    headerRight :{
+    },
+
+    headerRightText : {
+    }
 
 });

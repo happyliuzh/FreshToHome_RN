@@ -12,7 +12,9 @@ import CommonStyles from '../../utils/css/styles'
 export default class CartScreen extends Component{
 
     static navigationOptions = {
-        title : "菜篮子"
+        title : "菜篮子",
+        headerTitleStyle : { alignSelf : 'center'},
+
     };
 
     render(){

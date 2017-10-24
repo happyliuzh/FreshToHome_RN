@@ -40,7 +40,9 @@ import OrderHandleItem from '../../components/Me/OrderHandleItem'
 class MeScreen extends Component{
 
     static navigationOptions = {
-        title : '我的'
+        title : '我的',
+        headerTitleStyle : { alignSelf : 'center'},
+
     };
 
     constructor(){

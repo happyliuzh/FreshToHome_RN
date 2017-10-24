@@ -19,6 +19,14 @@ export default class ZoneScreen extends Component{
 
         title : '货架专区',
         headerTintColor : Colors.MainColor,
+        headerTitleStyle : { alignSelf : 'center'},
+        headerRight : (
+            <View style = { {
+                width : 32,
+                height : 32,
+            } }/>
+        )
+
     };
 
     render(){

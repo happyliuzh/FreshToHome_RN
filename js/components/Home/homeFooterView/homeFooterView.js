@@ -20,7 +20,7 @@ export default class HomeFooterView extends Component{
                    为您提供更加优质服务
                 </Text>
 
-                <Text style={[Styles.text, {fontSize : 20, }]}>
+                <Text style={[Styles.text]}>
                     请关注"新鲜到家喽"微信公众号
                 </Text>
             </View>
