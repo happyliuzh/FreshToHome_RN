@@ -21,6 +21,7 @@ import HomeHeaderView from '../homeHeaderView'
 import ItemHeader from '../../Util/itemHeader'
 import QuickSkimView from '../../Home/QuickSkimView'
 import HomeFooterView from '../../Home/homeFooterView'
+import ClickUitl from '../../../utils/noDoubleClick'
 
 
 export default class HomeView extends Component
@@ -80,7 +81,14 @@ export default class HomeView extends Component
         return (
             <TouchableOpacity onPress={
                 () => {
+
+                    if(ClickUitl.noDoubleClick()){
+
+
+                    }
+
                     navigate('Zone');
+
                 }
             }>
                 <HomeFooterView/>
