@@ -3,14 +3,14 @@
  */
 
 
-import AppNavigator from '../../../../screens/TabScreen'
+import { App } from '../../../../../App'
 
 import { NavigationActions } from 'react-navigation';
 
 
 export default function naviReducer(state, action) {
 
-    const newState = AppNavigator.router.getStateForAction(action, state);
+    const newState = App.router.getStateForAction(action, state);
     return newState || state;
 
 }

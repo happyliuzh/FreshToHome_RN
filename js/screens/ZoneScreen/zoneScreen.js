@@ -7,7 +7,9 @@ import {
     View,
     Text,
     StyleSheet,
+    TouchableOpacity,
 } from 'react-native'
+import TestComponent from './test'
 
 import Colors from '../../utils/color'
 
@@ -31,9 +33,17 @@ export default class ZoneScreen extends Component{
 
     render(){
         return (
-            <CateListView>
 
-            </CateListView>
+            <TestComponent
+            >
+
+            </TestComponent>
+
+
         );
     }
 }
+
+//<CateListView>
+
+//</CateListView>
