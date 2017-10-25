@@ -115,8 +115,7 @@ export default class CateListView extends Component
                               keyExtractor={(item, index) => `${index} - ${item}`}  //this is required when you are using FlatList
                               item={this._renderItem}  //this takes three params (item, index, separator)
                               numColumns={1}
-                              refreshableMode="advanced"
-
+                              refreshableMode={ Platform.OS === 'ios' ? 'basic' : 'basic'} //advanced
 
                               //是否允许上拉加载更多
                               pagination
