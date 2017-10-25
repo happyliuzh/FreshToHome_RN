@@ -2,6 +2,12 @@
  * Created by liuzhihui on 2017/10/19.
  */
 
-import ToastComponent from './easyToast'
+import RootToastUtil from './rootToast'
+import EasyToastComponent from './easyToast'
 
-export default ToastComponent;
+// export default {
+//     RootToastUtil,
+//     EasyToastComponent,
+// };
+
+export default RootToastUtil;

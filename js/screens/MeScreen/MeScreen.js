@@ -9,20 +9,7 @@ import {View,
     Platform,
 } from 'react-native'
 
-
-import ToastComponent from '../../utils/toast/easyToast'
-
-import { PulseLoader } from 'react-native-indicator'
-
-import Toast from 'react-native-root-toast'
-
-import Modal from 'react-native-root-modal'
-
-import Spinner from 'react-native-loading-spinner-overlay';
-
-
-import Colors from '../../utils/color'
-
+import ToastUtil  from '../../utils/toast'
 
 //redux 绑定
 import {connect} from 'react-redux';
@@ -121,8 +108,8 @@ class MeScreen extends Component{
         }
 
         // alert(item.title);
+        ToastUtil(item.title);
 
-        this.refs.toast.show(item.title);
         console.log(item.title);
 
     };
@@ -260,9 +247,6 @@ render(){
 
             >
             </FlatList>
-            {
-                ToastComponent()
-            }
 
         </View>
         );
