@@ -12,7 +12,6 @@ import {
 } from 'react-native'
 
 import UltimateListView from 'react-native-ultimate-listview'
-import CarouselView from '../carouseView'
 import DetailListItem from '../../Util/zoneListItem'
 import Loader from '../../../utils/loader'
 import LoaderMore from '../../Util/loaderMore'
@@ -27,19 +26,8 @@ export default class CateListView extends Component
     }
 
 
-
     _renderHeader = ()=>{
-
         return null;
-
-        return (
-
-            <CarouselView>
-
-            </CarouselView>
-
-        );
-
     }
 
 
@@ -93,11 +81,6 @@ export default class CateListView extends Component
 
     _renderPaginationWaitingView = () => {
 
-        // return (
-        //     <LoaderMore>
-        //
-        //     </LoaderMore>
-        // );
         return (
             <View style={{alignItems : 'center',justifyContent : 'center',height:44}}>
 
@@ -132,11 +115,13 @@ export default class CateListView extends Component
                               keyExtractor={(item, index) => `${index} - ${item}`}  //this is required when you are using FlatList
                               item={this._renderItem}  //this takes three params (item, index, separator)
                               numColumns={1}
+                              refreshableMode="advanced"
+
 
                               //是否允许上拉加载更多
-                              pagination={true}
+                              pagination
                               //是否允许下拉刷新
-                              refreshable={true}
+                              refreshable
 
                               displayDate
 
