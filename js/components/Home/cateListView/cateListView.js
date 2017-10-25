@@ -17,6 +17,7 @@ import Loader from '../../../utils/loader'
 import LoaderMore from '../../Util/loaderMore'
 import Colors from '../../../utils/color'
 import ListFooter from '../../Util/listFooter'
+import PageWaitView from '../../Util/pageWaitView'
 
 export default class CateListView extends Component
 {
@@ -82,20 +83,16 @@ export default class CateListView extends Component
     _renderPaginationWaitingView = () => {
 
         return (
-            <View style={{alignItems : 'center',justifyContent : 'center',height:44}}>
 
-                <ActivityIndicator>
+            <PageWaitView>
 
-                </ActivityIndicator>
-
-            </View>
+            </PageWaitView>
         );
     };
 
     _renderEmptyView = () => {
         return (
             <View>
-                <Text> i am empty !</Text>
             </View>
         );
     };
