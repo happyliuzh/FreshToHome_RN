@@ -29,6 +29,7 @@ export default class QuickSkimItem extends Component{
                             routeName : 'Zone',
                             params    : {
                                 title : this.props.type,
+                                index : this.props.index,
                             }
                         }));
                     }}>

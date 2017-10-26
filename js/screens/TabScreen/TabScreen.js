@@ -97,6 +97,7 @@ const tabBarNavigatorApp = TabNavigator({
     },
 
     {
+
         tabBarPosition : 'bottom',
         swipeEnabled : _swipeEnable(),
         tabBarOptions: {
