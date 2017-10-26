@@ -37,3 +37,6 @@ container: {
   },
 
 
+  为了让ultimateListView支持scrollToIndex,添加了getItemLayout属性。
+
+
