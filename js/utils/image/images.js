@@ -54,6 +54,8 @@ export default {
         Search          : require('./res/Common/search.png'),
         ToBeSelected    : require('./res/Common/toBeSelected.png'),
         Selected        : require('./res/Common/selected.png'),
+        Add             : require('./res/Common/add.png'),
+        Reduce          : require('./res/Common/reduce.png'),
     },
 
     NativeImage : {

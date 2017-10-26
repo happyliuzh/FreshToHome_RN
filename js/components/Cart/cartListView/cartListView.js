@@ -16,7 +16,7 @@ import {
 import UltimateListView from 'react-native-ultimate-listview'
 
 import Loader from '../../../utils/loader'
-
+import CartListItem from '../CartListItem'
 
 
 export default class CartListView extends Component{
@@ -35,10 +35,9 @@ export default class CartListView extends Component{
     _renderItem = (item, index, separator) => {
 
         return (
+            <CartListItem>
 
-            <Text style={{height : 44, }}>
-                123
-            </Text>
+            </CartListItem>
         );
 
     };

@@ -12,6 +12,7 @@ import {
 } from 'react-native'
 
 import SearchHeader from '../../components/Search/searchHeader'
+import SearchListView from '../../components/Search/searchListView'
 import CommonStyles from '../../utils/css/styles'
 
 export default class SearchScreen extends Component{
@@ -28,6 +29,8 @@ export default class SearchScreen extends Component{
                 <SearchHeader navigation = { this.props.navigation }>
 
                 </SearchHeader>
+
+                <SearchListView data={ [{}]}/>
             </View>
 
         );
