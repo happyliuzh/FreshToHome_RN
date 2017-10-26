@@ -88,7 +88,7 @@ export default class QuickSkimView extends Component{
 
         return (
             <FlatList   keyExtractor={(item, index) => {return index;}}
-                        data = {data} //数据源
+                        data = {this.props.data} //数据源
                         renderItem = {(item) => this._renderRow(item)} //每一行render
                         ItemSeparatorComponent = { this._renderSeprator }
                         removeClippedSubviews={false}

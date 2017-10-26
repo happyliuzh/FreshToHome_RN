@@ -35,8 +35,12 @@ export default class QuickSkimItem extends Component{
                         <Image source={Images.Test.TestVegatable} style={Styles.img}/>
                     </TouchableOpacity>
 
+                    <Text style={Styles.title}>
+                        { this.props.data.title }
+                    </Text>
+
                     <Text style={Styles.text}>
-                        ￥234.78/斤
+                        { this.props.data.price ? this.props.data.price : '￥234.78/斤'}
                     </Text>
 
                     <TouchableOpacity onPress={ ()=>{
@@ -56,7 +60,7 @@ export default class QuickSkimItem extends Component{
 const Styles = StyleSheet.create({
     container : {
         width : 100,
-        height : 160,
+        height : 180,
         justifyContent : 'center',
         alignItems : 'center',
     },
@@ -77,5 +81,11 @@ const Styles = StyleSheet.create({
     text : {
         marginTop : 4,
         color : Colors.MainColor,
+    }
+    ,
+    title : {
+        marginTop : 4,
+        color : '#666666',
+
     }
 });

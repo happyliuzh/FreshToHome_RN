@@ -98,7 +98,13 @@ export default class HomeView extends Component
             {
                 key: "热卖蔬菜",
                 data:[
-                        { title: "阿童木" },
+                        { title: "白菜" },
+                        { title: "西红柿" },
+                        { title: "土豆" },
+                        { title: "洋葱" },
+                        { title: "大葱" },
+                        { title: "折耳根" },
+                        { title: "小青菜" },
                 ],
             //     data: [
             //     { title: "阿童木" },
@@ -155,7 +161,13 @@ export default class HomeView extends Component
             {
                 key : '热卖肉蛋',
                 data:[
-                    { title: "阿童木" },
+                    { title: "里脊肉" },
+                    { title: "排骨" },
+                    { title: "精瘦肉" },
+                    { title: "牛腩" },
+                    { title: "羊肉" },
+                    { title: "鸡胸肉" },
+                    { title: "土鸡蛋" },
                 ],
 
             },
@@ -163,14 +175,24 @@ export default class HomeView extends Component
             {
                 key : '热卖生鲜',
                 data:[
-                    { title: "阿童木" },
+                    { title: "三文鱼" },
+                    { title: "螃蟹" },
+                    { title: "深海大虾" },
+                    { title: "鱿鱼" },
+                    { title: "扇贝" },
+                    { title: "基围虾" },
                 ],
 
             },
             {
                 key : '热卖水果',
                 data:[
-                    { title: "阿童木" },
+                    { title: "红富士" },
+                    { title: "海南香蕉" },
+                    { title: "红心蜜柚" },
+                    { title: "糖心苹果" },
+                    { title: "龙眼" },
+                    { title: "杏子" },
                 ],
 
             },
