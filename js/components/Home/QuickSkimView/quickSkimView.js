@@ -12,6 +12,8 @@ import {
 
 } from 'react-native'
 
+import  { NavigationActions } from 'react-navigation'
+
 import QuickSkimItem from '../../Util/QuickSkimItem'
 import Colors from '../../../utils/color'
 import Images from '../../../utils/image'
@@ -130,7 +132,13 @@ export default class QuickSkimView extends Component{
 
             <View style =  {Styles.footer }>
                 <TouchableOpacity style =  { Styles.footer } onPress={() => {
-                    alert('加载更多');
+                    const { dispatch } = this.props.navigation;
+                    dispatch(NavigationActions.navigate({
+                        routeName : 'Zone',
+                        params : {
+                            title : this.props.type,
+                        }
+                    }));
                 }}>
 
                     <Text style={ Styles.footText }>

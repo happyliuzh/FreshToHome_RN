@@ -219,6 +219,9 @@ export default class HomeView extends Component
                              refreshing={false}
                              stickySectionHeadersEnabled = {false}
 
+                            //解决flatlist动一下才显示的问题
+                             removeClippedSubviews={false}
+
                 >
 
                 </SectionList>

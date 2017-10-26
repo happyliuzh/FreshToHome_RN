@@ -70,25 +70,26 @@ export default class CartListView extends Component{
     render(){
         return (
             <UltimateListView onFetch={this._onFetch}
+                              ref={(ref) => this.listView = ref}
                               keyExtractor={(item, index) => `${index} - ${item}`}  //this is required when you are using FlatList
                               item={this._renderItem}  //this takes three params (item, index, separator)
                               numColumns={1}
                               refreshableMode={ Platform.OS === 'ios' ? 'basic' : 'basic'} //advanced
 
-                //是否允许上拉加载更多
+                              //是否允许上拉加载更多
                               pagination = { false }
-                //是否允许下拉刷新
+                              //是否允许下拉刷新
                               refreshable
 
                               displayDate
 
-                //第一次取数据页面的loading
+                              //第一次取数据页面的loading
                               paginationFetchingView={this._renderPaginationFetchingView}
 
-                //没有数据的时候空view
+                              //没有数据的时候空view
                               emptyView={this._renderEmptyView}
 
-                //cell之间的间隔seprator view
+                              //cell之间的间隔seprator view
                               separator={this._renderSeparatorView}
 
 
@@ -99,7 +100,7 @@ export default class CartListView extends Component{
                               waitingSpinnerText='加载中...'
 
 
-                //new props on v3.2.0
+                              //new props on v3.2.0
                               arrowImageStyle={{width: 20, height: 20, resizeMode: 'contain'}}
                               dateStyle={{color: 'lightgray'}}
                               refreshViewStyle={Platform.OS === 'ios' ? {height: 80, top: -80} : {height: 80}}

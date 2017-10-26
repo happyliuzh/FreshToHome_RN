@@ -47,6 +47,17 @@ export default class CateListView extends Component
             else
             {
                 startFetch(rowData, pageLimit);
+
+                if(page == 1)
+                {
+                    const  { params } = this.props.navigation.state;
+
+                    if(params.index)
+                    {
+                        this.listView.scrollToIndex({viewPosition: 0, index: Math.floor(params.index)});
+                    }
+                }
+
             }
 
         }, 1000);
@@ -64,6 +75,14 @@ export default class CateListView extends Component
         );
 
     };
+
+    _itemHeight = () => {
+        return 100;
+    }
+
+    _sepratorHeight = () => {
+        return 10;
+    }
 
     _renderPaginationFetchingView = () => {
 
@@ -108,6 +127,9 @@ export default class CateListView extends Component
     render(){
         return (
             <UltimateListView header={this._renderHeader}
+                              ref={(ref) => this.listView = ref}
+
+
                               onFetch={this._onFetch}
                               keyExtractor={(item, index) => `${index} - ${item}`}  //this is required when you are using FlatList
                               item={this._renderItem}  //this takes three params (item, index, separator)
@@ -149,6 +171,8 @@ export default class CateListView extends Component
                               dateStyle={{color: 'lightgray'}}
                               refreshViewStyle={Platform.OS === 'ios' ? {height: 80, top: -80} : {height: 80}}
                               refreshViewHeight={80}
+
+                              getItemLayout = {(data, index) => ( {length: this._itemHeight(), offset: this._itemHeight() * index + this._sepratorHeight() * (index - 1), index} )}
 
             >
             </UltimateListView>

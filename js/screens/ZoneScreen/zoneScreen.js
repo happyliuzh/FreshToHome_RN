@@ -33,7 +33,7 @@ export default class ZoneScreen extends Component{
 
     render(){
         return (
-            <CateListView>
+            <CateListView navigation = { this.props.navigation }>
 
             </CateListView>
         );
