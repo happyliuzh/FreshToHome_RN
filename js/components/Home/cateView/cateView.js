@@ -67,7 +67,11 @@ export default class HomeCateView extends Component
 
                             return (
 
-                                <HomeCateItem title={item.title} itemType={item.type} key={item.type}>
+                                <HomeCateItem title={item.title}
+                                              itemType={item.type}
+                                              key={item.type}
+                                              navigation = { this.props.navigation }
+                                >
 
                                 </HomeCateItem>
                             );

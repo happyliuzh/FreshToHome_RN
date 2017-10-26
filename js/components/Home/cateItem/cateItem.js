@@ -75,43 +75,12 @@ export default class HomeCateItem extends Component
 
         const type = this.props.itemType;
 
-        const  { dispatch }= this.props;
+        const  { dispatch }= this.props.navigation;
 
-        dispatch(NavigationActions.navigate({ routeName : 'Zone' }));
-
-
-        // alert(dispatch);
-
-        // alert('去' + this.props.title );
-
-        switch (type)
-        {
-            case 1:
-            {
-                break;
-            }
-
-            case 2:
-            {
-                break;
-            }
-
-            case 3:
-            {
-                break;
-            }
-
-            case 4:
-            {
-                break;
-            }
-
-            default:{
-
-
-                break;
-            }
-        }
+        dispatch(NavigationActions.navigate({ routeName : 'Zone' },{
+            title : this.props.title,
+            type  : this.props.itemType,
+        }));
 
     }
 

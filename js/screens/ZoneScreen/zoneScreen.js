@@ -34,16 +34,17 @@ export default class ZoneScreen extends Component{
     render(){
         return (
 
-            <TestComponent
+            <CateListView
             >
 
-            </TestComponent>
+
+            </CateListView>
 
 
         );
     }
 }
 
-//<CateListView>
+//<TestComponent>
 
-//</CateListView>
+//</TestComponent>

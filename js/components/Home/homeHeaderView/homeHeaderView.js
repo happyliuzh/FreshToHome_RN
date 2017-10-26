@@ -24,7 +24,7 @@ export default class HomeHeaderView extends Component{
 
                 </CarouseView>
 
-                <HomeCateView>
+                <HomeCateView navigation = { this.props.navigation }>
 
                 </HomeCateView>
 

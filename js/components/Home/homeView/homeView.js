@@ -69,7 +69,7 @@ export default class HomeView extends Component
     };
 
     _listHeader = ()=> {
-        return <HomeHeaderView/>
+        return <HomeHeaderView navigation = { this.props.navigation }/>
     }
 
     _listFooter = () => {
@@ -79,20 +79,7 @@ export default class HomeView extends Component
         const { navigate } = this.props.navigation;
 
         return (
-            <TouchableOpacity onPress={
-                () => {
-
-                    if(ClickUitl.noDoubleClick()){
-
-
-                    }
-
-                    navigate('Zone');
-
-                }
-            }>
                 <HomeFooterView/>
-            </TouchableOpacity>
         );
 
 
