@@ -16,6 +16,7 @@ import {
 
 import Images from '../../../utils/image'
 import Colors from '../../../utils/color'
+import SwipeCell from 'react-native-swipeout'
 
 export default class CartListItem extends Component{
 
@@ -57,7 +58,7 @@ export default class CartListItem extends Component{
         );
     }
 
-    render(){
+    _renderCellView = () => {
         return (
             <View style = { Styles.container }>
                 {
@@ -96,12 +97,29 @@ export default class CartListItem extends Component{
             </View>
         );
     }
+
+    render(){
+        var swipeoutBtns = [
+            {
+                text: '删除'
+            }
+        ]
+
+        return (
+            <SwipeCell right={swipeoutBtns}>
+                {
+                    this._renderCellView()
+                }
+            </SwipeCell>
+        );
+    }
 }
 
 const Styles = StyleSheet.create({
     container : {
         height : 100,
         flexDirection : 'row',
+        backgroundColor: '#f6f6f6'
     },
 
     selectView : {

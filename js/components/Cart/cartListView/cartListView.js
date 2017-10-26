@@ -105,6 +105,9 @@ export default class CartListView extends Component{
                               refreshViewStyle={Platform.OS === 'ios' ? {height: 80, top: -80} : {height: 80}}
                               refreshViewHeight={80}
 
+                              //解决flatlist动一下才显示的问题
+
+                              removeClippedSubviews={false}
             >
             </UltimateListView>
         );
