@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {View,
     Text,
+    TouchableOpacity,
 } from 'react-native'
 
 import CartDefaultHint from '../../components/Cart/defaultHint'
@@ -8,6 +9,7 @@ import CartDefaultHint from '../../components/Cart/defaultHint'
 import CommonStyles from '../../utils/css/styles'
 import CartView from '../../components/Cart/cartView'
 import Loader from '../../utils/loader'
+import Colors from '../../utils/color'
 
 // <CartDefaultHint onPress={() => {
 //     const { navigate } = this.props.navigation;
@@ -22,6 +24,21 @@ export default class CartScreen extends Component{
     static navigationOptions = {
         title : "菜篮子",
         headerTitleStyle : { alignSelf : 'center'},
+        headerRight:(
+            <TouchableOpacity style = { { marginRight : 16,} }
+                              onPress = { () => {
+                                  alert('常购清单');
+                              }}
+
+            >
+                <Text style={ {
+                    color : Colors.MainColor,
+                    fontSize : 18,
+                } }>
+                    编辑
+                </Text>
+            </TouchableOpacity>
+        ),
 
     };
 

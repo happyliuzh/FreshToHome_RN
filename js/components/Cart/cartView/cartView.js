@@ -13,6 +13,7 @@ import {
 } from 'react-native'
 
 import CartAccountView from '../cartAccountView'
+import CartEditView from '../cartEditView'
 import CartListView from '../cartListView'
 
 import CommonStyles from '../../../utils/css/styles'

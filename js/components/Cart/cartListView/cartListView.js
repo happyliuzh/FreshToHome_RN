@@ -17,18 +17,9 @@ import UltimateListView from 'react-native-ultimate-listview'
 
 import Loader from '../../../utils/loader'
 
-import CartHeaderView from '../cartHeaderView'
 
 
 export default class CartListView extends Component{
-
-    _renderHeader = ()=>{
-        return (
-            <CartHeaderView>
-
-            </CartHeaderView>
-        );
-    }
 
 
     _onFetch = (page = 1, startFetch, abortFetch)=> {
@@ -78,8 +69,7 @@ export default class CartListView extends Component{
 
     render(){
         return (
-            <UltimateListView header={this._renderHeader}
-                              onFetch={this._onFetch}
+            <UltimateListView onFetch={this._onFetch}
                               keyExtractor={(item, index) => `${index} - ${item}`}  //this is required when you are using FlatList
                               item={this._renderItem}  //this takes three params (item, index, separator)
                               numColumns={1}

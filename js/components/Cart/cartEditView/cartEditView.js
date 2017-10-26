@@ -1,4 +1,7 @@
 /**
+ * Created by liuzhihui on 2017/10/26.
+ */
+/**
  * Created by liuzhihui on 2017/10/25.
  */
 import React, {
@@ -13,10 +16,11 @@ import {
     TouchableOpacity,
 } from 'react-native'
 
-import Colors from '../../../utils/color'
 import Images from '../../../utils/image'
+import { Button } from 'native-base'
+import Colors from '../../../utils/color'
 
-export default class CartAccountView extends Component{
+export default class CartEditView extends Component{
 
     render(){
         return (
@@ -32,15 +36,12 @@ export default class CartAccountView extends Component{
 
                     </TouchableOpacity>
 
-                    <Text>
-                        共计 119 元
-                    </Text>
-
                 </View>
 
-                <TouchableOpacity style = { Styles.right }>
-                    <Text style={ Styles.accountText }>
-                        去结算
+                <TouchableOpacity style = { Styles.right }
+                >
+                    <Text style={ Styles.deleteText }>
+                        删除
                     </Text>
                 </TouchableOpacity>
             </View>
@@ -63,10 +64,16 @@ const Styles = StyleSheet.create({
     },
 
     right : {
-        width : 120,
-        backgroundColor : Colors.MainColor,
+        width : 60,
         justifyContent:'center',
         alignItems : 'center',
+        borderColor : Colors.MainColor,
+        borderWidth : 1,
+        borderRadius : 4,
+        marginTop : 10,
+        marginBottom : 10,
+        marginLeft : 20,
+        marginRight : 20,
 
     },
 
@@ -90,8 +97,8 @@ const Styles = StyleSheet.create({
 
     },
 
-    accountText :{
-        fontSize : 18,
-        color : '#f6f6f6',
+    deleteText :{
+        fontSize : 16,
+        color : '#999999',
     }
 });

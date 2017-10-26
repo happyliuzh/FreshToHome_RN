@@ -52,6 +52,8 @@ export default {
         ShoppingCart    : require('./res/Common/shoppingCart.png'),
         PointRight      : require('./res/Common/point_right.png'),
         Search          : require('./res/Common/search.png'),
+        ToBeSelected    : require('./res/Common/toBeSelected.png'),
+        Selected        : require('./res/Common/selected.png'),
     },
 
     NativeImage : {
