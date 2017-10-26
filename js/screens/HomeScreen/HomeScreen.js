@@ -59,8 +59,15 @@ export default class HomeScreen extends Component{
         headerLeft : (
             <TouchableOpacity style = { { marginLeft : 16}}
                               onPress = { () => {
-                                  alert('搜索');
-                              }}
+
+                                  const { dispatch } = navigation;
+
+                                  dispatch(NavigationActions.navigate({
+                                      routeName : 'Search',
+                                      params    : {
+                                          title : '常购清单',
+                                      },
+                                  }));                              }}
             >
                 <Image source={ require('../../utils/image/res/Common/search.png') } style={{
                     width : 24,

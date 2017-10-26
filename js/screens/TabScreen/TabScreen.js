@@ -14,6 +14,7 @@ import DetailScreen from '../DetailScreen'
 import CartScreen from '../CartScreen'
 import MeScreen from '../MeScreen'
 import ZoneScreen from '../ZoneScreen'
+import SearchScreen from '../SearchScreen'
 
 import Icon from 'react-native-vector-icons/Ionicons'
 
@@ -143,6 +144,9 @@ const composeTabAndStackNavigatorApp = StackNavigator({
     Zone : {
         screen : ZoneScreen,
 
+    },
+    Search : {
+        screen : SearchScreen,
     }
 });
 
