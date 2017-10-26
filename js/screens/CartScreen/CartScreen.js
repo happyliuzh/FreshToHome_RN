@@ -57,7 +57,8 @@ export default class CartScreen extends Component{
             this.setState({
                 loading : false,
             });
-        }, 3000);
+        }, 1000);
+
     }
 
     render(){

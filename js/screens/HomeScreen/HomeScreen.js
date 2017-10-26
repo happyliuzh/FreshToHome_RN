@@ -9,6 +9,9 @@ import {
     RefreshControl,
     TouchableOpacity,
 } from 'react-native'
+
+import { NavigationActions ,} from 'react-navigation'
+
 import CommonStyles from '../../utils/css/styles'
 
 import Colors from '../../utils/color'
@@ -24,14 +27,22 @@ import Loader from '../../utils/loader'
 
 export default class HomeScreen extends Component{
 
-    static navigationOptions = {
+    static navigationOptions = ({navigation}) => ({
         title: '生鲜货架',
         headerTitleStyle : { alignSelf : 'center'},
         headerBackTitle : '返回',
         headerRight:(
            <TouchableOpacity style = { { marginRight : 16,} }
                              onPress = { () => {
-                                 alert('常购清单');
+
+                                const { dispatch } = navigation;
+
+                                dispatch(NavigationActions.navigate({
+                                    routeName : 'Zone',
+                                    params    : {
+                                      title : '常购清单',
+                                    },
+                                }));
                              }}
 
            >
@@ -57,7 +68,7 @@ export default class HomeScreen extends Component{
                 }}/>
             </TouchableOpacity>
         )
-    };
+    });
 
     constructor(){
         super();
@@ -83,7 +94,7 @@ export default class HomeScreen extends Component{
                 isLoaded:true,
             });
 
-        }, 2000);
+        }, 1000);
     }
 
     render(){

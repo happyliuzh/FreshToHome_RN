@@ -29,20 +29,17 @@ export default class HomeView extends Component
 
     _renderRow = (info) => {
 
-        var txt = '  ' + info.item.title;
+
+        return null;
 
         return (
-            <QuickSkimView>
+            <QuickSkimView navigation = { this.props.navigation }
+                           type       = { info.item.key }
+                           data       = { info.item.data }
+            >
 
             </QuickSkimView>
         );
-
-        return <View style = {{height : 44, alignItems : 'center'}}>
-                    <Text>
-                        {txt}
-                    </Text>
-                </View>;
-
 
     };
 
@@ -56,9 +53,18 @@ export default class HomeView extends Component
             marginTop : 10,
             marginBottom : 10,
         }}>
-            <ItemHeader leftTitle = { info.section.key } leftImg={Images.Home.HotSale} >
+            <ItemHeader leftTitle = { info.section.key }
+                        leftImg={Images.Home.HotSale}
+            >
 
             </ItemHeader>
+
+            <QuickSkimView navigation = { this.props.navigation }
+                           type       = { info.section.key }
+                           data       = { info.section.data }
+            >
+
+            </QuickSkimView>
 
         </View>
 

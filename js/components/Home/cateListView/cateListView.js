@@ -34,7 +34,7 @@ export default class CateListView extends Component
 
     _onFetch = (page = 1, startFetch, abortFetch)=> {
 
-        let pageLimit = 10;
+        let pageLimit = 20;
 
         let rowData = Array.from({length: pageLimit}, (value, index) => `item -> ${index}`);
 
@@ -49,7 +49,7 @@ export default class CateListView extends Component
                 startFetch(rowData, pageLimit);
             }
 
-        }, 2000);
+        }, 1000);
 
 
     }

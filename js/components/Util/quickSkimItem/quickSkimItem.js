@@ -10,7 +10,9 @@ import {
     Text,
     StyleSheet,
 } from 'react-native'
-
+import {
+    NavigationActions,
+} from 'react-navigation'
 
 import Colors from '../../../utils/color'
 import Images from '../../../utils/image'
@@ -21,7 +23,14 @@ export default class QuickSkimItem extends Component{
         return (
                 <View style = {Styles.container}>
                     <TouchableOpacity onPress={() => {
-                        alert('去列表页面。。。');
+                        const { dispatch } = this.props.navigation;
+
+                        dispatch(NavigationActions.navigate({
+                            routeName : 'Zone',
+                            params    : {
+                                title : this.props.type,
+                            }
+                        }));
                     }}>
                         <Image source={Images.Test.TestVegatable} style={Styles.img}/>
                     </TouchableOpacity>

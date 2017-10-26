@@ -105,7 +105,11 @@ export default class QuickSkimView extends Component{
     _renderRow = (item) => {
 
         return (
-            <QuickSkimItem>
+            <QuickSkimItem navigation = { this.props.navigation }
+                           data = { item.item }
+                           index = { item.index }
+                           type = { this.props.type }
+            >
 
             </QuickSkimItem>
         );
