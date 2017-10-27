@@ -18,6 +18,9 @@ import OrderContentList from '../orderContentList'
 import Images from '../../../utils/image'
 import Colors from '../../../utils/color'
 
+import OrderBottomView from '../orderBottomView'
+
+
 export default class OrderListItem extends Component{
 
     _renderHeaderTitle = () => {
@@ -109,7 +112,9 @@ export default class OrderListItem extends Component{
     _renderOrderBottom = () => {
         return (
             <View style = { Styles.orderBottom }>
+                <OrderBottomView>
 
+                </OrderBottomView>
             </View>
         );
     }
@@ -205,6 +210,7 @@ const Styles = StyleSheet.create({
 
     orderBottom : {
         height : 44,
+        justifyContent : 'flex-end',
     },
 
 });
