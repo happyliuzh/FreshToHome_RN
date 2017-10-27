@@ -59,30 +59,21 @@ class MeScreen extends Component{
         };
     }
 
-    //订单相关的点击事件。
-    _pendingPaymentAction=()=>{
-        alert('待付款！');
-    };
+    //订单相关的5个点击事件。
 
-    _tobeReceivedAction=()=>{
-        alert('待收货！');
-    };
+    _orderDealAction = ( params ) => {
 
-    _completedOrderAction=()=>{
-        alert('已完成！');
-    };
+        const { dispatch }  = this.props.navigation;
 
-    _allOrderAction=()=>{
-        alert('全部！');
-    };
+        dispatch(NavigationActions.navigate({
+            routeName:'Order',
+            params:{
+                title : params.title,
+            }
+        }));
 
-    _cancelledAction=()=>{
-        alert('已取消');
-    };
+    }
 
-    _tobeEvaluated=()=>{
-        alert('待评价');
-    };
 
     _rowPress=(item)=>{
 
@@ -140,27 +131,37 @@ class MeScreen extends Component{
 
                 <OrderHandleItem title='待付款'
                                  image={Images.Me.PendingPayment}
-                                 onPress={this._pendingPaymentAction}
+                                 onPress={this._orderDealAction.bind(this, {
+                                     title : '待付款'
+                                 })}
                 >
                 </OrderHandleItem>
                 <OrderHandleItem title='待收货'
                                  image={Images.Me.Shipped}
-                                 onPress={this._tobeReceivedAction}
+                                 onPress={this._orderDealAction.bind(this, {
+                                     title : '待收货'
+                                 })}
                 >
                 </OrderHandleItem>
                 <OrderHandleItem title='已完成'
                                  image={Images.Me.Order_Completed}
-                                 onPress={this._completedOrderAction}
+                                 onPress={this._orderDealAction.bind(this, {
+                                     title : '已完成'
+                                 })}
                 >
                 </OrderHandleItem>
                 <OrderHandleItem title='已取消'
                                  image={Images.Me.Cancelled}
-                                 onPress={this._cancelledAction}
+                                 onPress={this._orderDealAction.bind(this, {
+                                     title : '已取消'
+                                 })}
                 >
                 </OrderHandleItem>
                 <OrderHandleItem title='待评价'
                                  image={Images.Me.Evaluate}
-                                 onPress={this._tobeEvaluated}
+                                 onPress={this._orderDealAction.bind(this, {
+                                     title : '待评价'
+                                 })}
                 >
                 </OrderHandleItem>
             </View>
