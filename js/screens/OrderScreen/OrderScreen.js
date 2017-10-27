@@ -9,6 +9,15 @@ export default class OrderScreen extends Component{
         title : `${navigation.state.params.title}`,
         headerTintColor : Colors.MainColor,
         headerBackTitle : '返回',
+        headerTitleStyle : { alignSelf : 'center'},
+        headerRight : (
+            <View style = { {
+                width  : 32 ,
+                height : 32 ,
+            } }/>
+        )
+        
+
     })
     render(){
         return(
