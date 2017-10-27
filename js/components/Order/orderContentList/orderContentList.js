@@ -43,7 +43,7 @@ export default class OrderContentList extends Component{
                       showsHorizontalScrollIndicator = {false}
 
 
-                //解决flatlist动一下才显示的问题
+                      //解决flatlist动一下才显示的问题
                       removeClippedSubviews={false}
 
             >

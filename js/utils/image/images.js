@@ -64,5 +64,6 @@ export default {
 
     Order : {
         DeleteOrder     : require('./res/Order/deleteOrder.png'),
+        Logistics       : require('./res/Order/logistics.png'),
     }
 }
