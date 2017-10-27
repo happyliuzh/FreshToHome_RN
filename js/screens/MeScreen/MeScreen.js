@@ -22,6 +22,8 @@ import CommonStyles from '../../utils/css/styles'
 import Images from '../../utils/image'
 import OrderHandleItem from '../../components/Me/OrderHandleItem'
 
+import { NavigationActions} from 'react-navigation'
+
 
 
 class MeScreen extends Component{
@@ -87,30 +89,33 @@ class MeScreen extends Component{
         switch (item.type)
         {
             case MeItemTypes.ME_ALL_ORDER:{
-                console.log('全部订单。。。。');
-
+                const { dispatch }  = this.props.navigation;
+                dispatch(NavigationActions.navigate({
+                    routeName : 'Order',
+                }));
                 break;
             }
 
             case MeItemTypes.ME_Manage_ADDR:{
+                ToastUtil(item.title);
+
                 break;
             }
 
             case MeItemTypes.ME_FEED_BACK : {
+                ToastUtil(item.title);
+
                 break;
             }
 
             case MeItemTypes.ME_ABOUT_US :{
+                ToastUtil(item.title);
+
                 break;
             }
             default:
                 break;
         }
-
-        // alert(item.title);
-        ToastUtil(item.title);
-
-        console.log(item.title);
 
     };
 

@@ -1,34 +1,37 @@
 /**
- * Created by liuzhihui on 2017/10/20.
+ * Created by liuzhihui on 2017/10/27.
  */
+import React , {
+    Component,
+} from 'react'
 
-import React, { Component } from 'react'
 import {
-    View,
     StyleSheet,
-    Text,
+    View,
     Platform,
-    ActivityIndicator,
 } from 'react-native'
 
 import UltimateListView from 'react-native-ultimate-listview'
-import DetailListItem from '../../Util/zoneListItem'
+import OrderListItem from '../orderListItem'
 import Loader from '../../../utils/loader'
 import ListFooter from '../../Util/listFooter'
 import PageWaitView from '../../Util/pageWaitView'
 
-export default class CateListView extends Component
-{
 
-    constructor(props) {
-        super(props);
+export default class OrderView extends Component{
+
+
+    _renderRow = ( info ) => {
+        return (
+            <OrderListItem/>
+        );
     }
 
-
-    _renderHeader = ()=>{
-        return null;
+    _renderSeprator = () => {
+        return (
+            <View style = { Styles.seprator }/>
+        );
     }
-
 
     _onFetch = (page = 1, startFetch, abortFetch)=> {
 
@@ -45,41 +48,11 @@ export default class CateListView extends Component
             else
             {
                 startFetch(rowData, pageLimit);
-
-                if(page == 1)
-                {
-                    const  { params } = this.props.navigation.state;
-
-                    if(params.index)
-                    {
-                        this.listView.scrollToIndex({viewPosition: 0, index: Math.floor(params.index)});
-                    }
-                }
-
             }
 
         }, 1000);
 
 
-    }
-
-    _renderItem = (item, index, separator) => {
-
-        return (
-
-            <DetailListItem>
-
-            </DetailListItem>
-        );
-
-    };
-
-    _itemHeight = () => {
-        return 100;
-    }
-
-    _sepratorHeight = () => {
-        return 10;
     }
 
     _renderPaginationFetchingView = () => {
@@ -124,16 +97,13 @@ export default class CateListView extends Component
 
     render(){
         return (
-            <UltimateListView header={this._renderHeader}
+            <UltimateListView style = { Styles.container }
                               ref={(ref) => this.listView = ref}
-
-
                               onFetch={this._onFetch}
                               keyExtractor={(item, index) => `${index} - ${item}`}  //this is required when you are using FlatList
-                              item={this._renderItem}  //this takes three params (item, index, separator)
+                              item={this._renderRow}  //this takes three params (item, index, separator)
                               numColumns={1}
                               refreshableMode={ Platform.OS === 'ios' ? 'basic' : 'basic'} //advanced
-
                               //是否允许上拉加载更多
                               pagination
                               //是否允许下拉刷新
@@ -155,26 +125,21 @@ export default class CateListView extends Component
 
                               //cell之间的间隔seprator view
                               separator={this._renderSeparatorView}
-
-
-                              refreshableTitlePull="下拉刷新"
-                              refreshableTitleRelease="松手加载"
-                              refreshableTitleRefreshing="加载中..."
-                              dateTitle="上次加载"
-                              waitingSpinnerText='加载中...'
-
-
-                              //new props on v3.2.0
-                              arrowImageStyle={{width: 20, height: 20, resizeMode: 'contain'}}
-                              dateStyle={{color: 'lightgray'}}
-                              refreshViewStyle={Platform.OS === 'ios' ? {height: 80, top: -80} : {height: 80}}
-                              refreshViewHeight={80}
-
-                              getItemLayout = {(data, index) => ( {length: this._itemHeight(), offset: this._itemHeight() * index + this._sepratorHeight() * (index - 1), index} )}
-
             >
+
             </UltimateListView>
         );
     }
 
 }
+
+const Styles = StyleSheet.create({
+    container : {
+        flex : 1,
+    },
+
+    seprator : {
+        height : 5,
+        backgroundColor : '#f6f6f6'
+    }
+});
