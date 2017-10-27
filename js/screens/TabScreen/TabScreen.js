@@ -20,12 +20,14 @@ import Icon from 'react-native-vector-icons/Ionicons'
 
 //util
 import Colors from '../../utils/color'
+import CardStackStyleInterpolator from 'react-navigation/src/views/CardStack/CardStackStyleInterpolator';
 
 
 
 function _swipeEnable() {
 
-    return false;
+    return true;
+
 
     if(Platform.OS === 'ios')
     {
@@ -148,6 +150,11 @@ const composeTabAndStackNavigatorApp = StackNavigator({
     Search : {
         screen : SearchScreen,
     }
+},{
+    headerMode: 'screen',
+    transitionConfig:()=>({
+        screenInterpolator:CardStackStyleInterpolator.forHorizontal,
+    })
 });
 
 

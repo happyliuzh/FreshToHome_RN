@@ -27,7 +27,7 @@ export default class CartScreen extends Component{
         headerRight:(
             <TouchableOpacity style = { { marginRight : 16,} }
                               onPress = { () => {
-                                  alert('常购清单');
+                                  alert('编辑购物车');
                               }}
 
             >
