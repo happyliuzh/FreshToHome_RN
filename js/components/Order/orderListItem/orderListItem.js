@@ -10,11 +10,12 @@ import {
     StyleSheet,
     View,
     Text,
-    FlatList,
+    TouchableOpacity,
+    Image,
 } from 'react-native'
 
 import OrderContentList from '../orderContentList'
-
+import Images from '../../../utils/image'
 
 export default class OrderListItem extends Component{
 
@@ -24,6 +25,21 @@ export default class OrderListItem extends Component{
                 <Text style={ Styles.orderHeaderText }>
                     下单时间: 2017/10/27 - 09:21
                 </Text>
+
+                <View style = { Styles.orderStateView }>
+                    <Text style={ Styles.orderStateLabel }>
+                        已完成
+                    </Text>
+
+                    <View style = { Styles.stateLine }>
+
+                    </View>
+
+                    <TouchableOpacity>
+                        <Image  source = { Images.Order.DeleteOrder } style={ Styles.deleteImg }/>
+                    </TouchableOpacity>
+
+                </View>
             </View>
         );
     }
@@ -77,26 +93,44 @@ const Styles = StyleSheet.create({
         height : 44,
         flexDirection : 'row',
         alignItems : 'center',
-        justifyContent : 'center',
+        justifyContent : 'space-between',
     },
 
     orderHeaderText : {
         color : '#999999',
-        marginLeft : 16,
+    },
+
+    orderStateView : {
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'center',
+    },
+
+    orderStateLabel : {
+        color : '#999999',
+    },
+
+    stateLine : {
+        width: 1,
+        height : 16,
+        backgroundColor : '#999999',
+        marginLeft: 8,
+        marginRight:8,
+    },
+
+    deleteImg : {
+        width : 22,
+        height : 22,
+
     },
 
     orderContent : {
-        height:120,
-        alignItems:'center',
-        justifyContent:'center',
+        height:80,
 
-    },
-
-    orderContentList : {
-        height : 100,
     },
 
     orderBottom : {
         height : 44,
-    }
+    },
+
 });

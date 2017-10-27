@@ -31,7 +31,7 @@ class MeScreen extends Component{
     static navigationOptions = {
         title : '我的',
         headerTitleStyle : { alignSelf : 'center'},
-
+        headerBackTitle : '返回',
     };
 
     constructor(){
@@ -92,6 +92,9 @@ class MeScreen extends Component{
                 const { dispatch }  = this.props.navigation;
                 dispatch(NavigationActions.navigate({
                     routeName : 'Order',
+                    params : {
+                        title : '全部订单',
+                    }
                 }));
                 break;
             }

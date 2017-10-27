@@ -60,5 +60,9 @@ export default {
 
     NativeImage : {
         // Tab_btn_news_f : require('tab_btn_news_f'),
+    },
+
+    Order : {
+        DeleteOrder     : require('./res/Order/deleteOrder.png'),
     }
 }

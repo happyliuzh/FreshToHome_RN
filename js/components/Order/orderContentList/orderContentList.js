@@ -36,10 +36,14 @@ export default class OrderContentList extends Component{
         return (
             <FlatList style = { Styles.container }
                       keyExtractor={(item, index) => {return index;}}
-                      data = {[{}, {}, {}]}
+                      data = {[{}, {}, {}, {}, {}, {}, {}, {},]}
                       renderItem = { (info) => this._renderRow(info)}
                       ItemSeparatorComponent = {this._renderSeprator}
-                      //解决flatlist动一下才显示的问题
+                      horizontal = { true }
+                      showsHorizontalScrollIndicator = {false}
+
+
+                //解决flatlist动一下才显示的问题
                       removeClippedSubviews={false}
 
             >
@@ -51,11 +55,10 @@ export default class OrderContentList extends Component{
 
 const Styles = StyleSheet.create({
     container : {
-        height : 100,
+        height : 80,
     },
 
     seprator : {
         width : 5,
-        backgroundColor : '#f6f6f6',
     }
 });
