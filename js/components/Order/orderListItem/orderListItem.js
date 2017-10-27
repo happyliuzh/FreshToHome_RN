@@ -50,8 +50,8 @@ export default class OrderListItem extends Component{
         return (
             <View style = { Styles.logisticsView }>
                 <Image source={ Images.Order.Logistics } style={{
-                    width : 22,
-                    height : 22,
+                    width : 30,
+                    height : 30,
                 }}/>
 
                 <View style = { Styles.logisticsInfoText }>

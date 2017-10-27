@@ -16,7 +16,7 @@ export default class OrderScreen extends Component{
                 height : 32 ,
             } }/>
         )
-        
+
 
     })
     render(){
