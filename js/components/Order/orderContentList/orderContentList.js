@@ -36,7 +36,7 @@ export default class OrderContentList extends Component{
         return (
             <FlatList style = { Styles.container }
                       keyExtractor={(item, index) => {return index;}}
-                      data = {[{}, {}, {}, {}, {}, {}, {}, {},]}
+                      data = {[{}, {}, {}, {},]}
                       renderItem = { (info) => this._renderRow(info)}
                       ItemSeparatorComponent = {this._renderSeprator}
                       horizontal = { true }

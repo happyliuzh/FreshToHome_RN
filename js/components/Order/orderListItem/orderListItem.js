@@ -154,7 +154,7 @@ const Styles = StyleSheet.create({
     },
 
     orderHeaderText : {
-        color : '#999999',
+        color : Colors.MainColor,
     },
 
     orderStateView : {
@@ -164,7 +164,7 @@ const Styles = StyleSheet.create({
     },
 
     orderStateLabel : {
-        color : '#999999',
+        color : Colors.MainColor,
     },
 
     orderContentDes : {
@@ -192,7 +192,7 @@ const Styles = StyleSheet.create({
     stateLine : {
         width: 1,
         height : 16,
-        backgroundColor : '#999999',
+        backgroundColor : Colors.MainColor,
         marginLeft: 8,
         marginRight:8,
     },
@@ -200,6 +200,7 @@ const Styles = StyleSheet.create({
     deleteImg : {
         width : 22,
         height : 22,
+        tintColor : Colors.MainColor,
 
     },
 
