@@ -6,6 +6,7 @@ import {View,
     Image,
     TouchableHighlight,
     TouchableNativeFeedback,
+    TouchableOpacity,
     Platform,
 } from 'react-native'
 
@@ -23,7 +24,7 @@ import Images from '../../utils/image'
 import OrderHandleItem from '../../components/Me/OrderHandleItem'
 
 import { NavigationActions} from 'react-navigation'
-
+import Colors from '../../utils/color'
 
 
 class MeScreen extends Component{
@@ -32,6 +33,7 @@ class MeScreen extends Component{
         title : '我的',
         headerTitleStyle : { alignSelf : 'center'},
         headerBackTitle : '返回',
+        headerTintColor : Colors.MainColor,
     };
 
     constructor(){
@@ -118,8 +120,18 @@ class MeScreen extends Component{
     listHeader = ()=>{
         return (
             <View style={MeStyles.listHeader}>
-                <Image style={MeStyles.listHeaderPortrait} source={Images.Me.UserHeadDefault}></Image>
-                <Text style={MeStyles.listHeaderName}>新鲜到家客户</Text>
+
+                <TouchableOpacity onPress = { () => {
+                    const { dispatch } = this.props.navigation;
+                    dispatch(NavigationActions.navigate({
+                        routeName : 'UserInfo',
+                    }));
+
+                }}>
+                    <Image style={MeStyles.listHeaderPortrait} source={Images.Me.UserHeadDefault}></Image>
+                    <Text style={MeStyles.listHeaderName}>新鲜到家客户</Text>
+                </TouchableOpacity>
+
                 {this.orderHandle()}
             </View>
         );

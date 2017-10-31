@@ -15,7 +15,7 @@ const CommonStyles = StyleSheet.create({
     horizontalLine : {
         height : 0.5,
         flex : 1,
-        backgroundColor:'#333333',
+        backgroundColor:'#aaaaaa',
         marginLeft : 16,
         marginRight : 16,
     }

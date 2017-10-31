@@ -16,6 +16,7 @@ import MeScreen from '../MeScreen'
 import ZoneScreen from '../ZoneScreen'
 import SearchScreen from '../SearchScreen'
 import OrderScreen from '../OrderScreen'
+import UserInfoScreen from '../UserInfoScreen'
 
 import Icon from 'react-native-vector-icons/Ionicons'
 
@@ -153,6 +154,9 @@ const composeTabAndStackNavigatorApp = StackNavigator({
     },
     Order : {
         screen : OrderScreen,
+    },
+    UserInfo : {
+        screen : UserInfoScreen,
     }
 },{
     headerMode: 'screen',
