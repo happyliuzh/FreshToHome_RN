@@ -10,6 +10,7 @@ import {StackNavigator} from 'react-navigation';
 
 import LoginScreen from './js/screens/LoginScreen'
 import TabScreen from './js/screens/TabScreen'
+
 import { addNavigationHelpers } from 'react-navigation'
 import { connect, Provider} from 'react-redux'
 import PropTypes from 'prop-types'
@@ -34,7 +35,7 @@ const freshToHomeApp = StackNavigator({
 
 // export default freshToHomeApp;
 
-export const App = TabScreen;
+export const App = freshToHomeApp;
 
 
 

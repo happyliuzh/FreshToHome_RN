@@ -29,12 +29,32 @@ import Colors from '../../utils/color'
 
 class MeScreen extends Component{
 
-    static navigationOptions = {
+    static navigationOptions =({navigation}) => ({
         title : '我的',
         headerTitleStyle : { alignSelf : 'center'},
         headerBackTitle : '返回',
         headerTintColor : Colors.MainColor,
-    };
+        headerRight : (
+            <View style = { {
+                marginRight : 16,
+            }}>
+                <TouchableOpacity onPress = {
+                    () => {
+                        const { dispatch } = navigation;
+
+                        dispatch(NavigationActions.navigate({
+                            routeName : 'Logout'
+                        }));
+                    }
+                }>
+                    <Image source={ Images.Me.Settings } style={ {
+                        width : 22,
+                        height : 22,
+                    }}/>
+                </TouchableOpacity>
+            </View>
+        ),
+    });
 
     constructor(){
         super();
