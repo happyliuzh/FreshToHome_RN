@@ -13,6 +13,8 @@ import {
     Text,
 } from 'react-native'
 
+import { NavigationActions } from 'react-navigation'
+
 import Colors from '../../utils/color'
 import Styles from '../../utils/css/styles'
 import SimpleCell from '../../components/Util/simpleCell'
@@ -52,8 +54,21 @@ export default class SettingsScreen extends Component{
             <View style = { _Styles.footer }>
                 <BigRoundButton title = '退出当前账号'
                                 onPress = {
+                                    // () => {
+                                    //     alert('退出当前账号');
+                                    // }
+
                                     () => {
-                                        alert('退出当前账号');
+                                        // navigate('Main');
+                                        const resetAction = NavigationActions.reset({
+                                            index : 0,
+                                            actions : [
+                                                NavigationActions.navigate({
+                                                    routeName : 'Login'
+                                                })
+                                            ]
+                                        });
+                                        this.props.navigation.dispatch(resetAction);
                                     }
                                 }
                 >

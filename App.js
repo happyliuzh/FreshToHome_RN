@@ -18,24 +18,27 @@ import PropTypes from 'prop-types'
 
 //加入login的逻辑。
 
-const freshToHomeApp = StackNavigator({
-    Login : {
-        screen : LoginScreen,
-        navigationOptions : {
-            header : null,
-        }
-    },
-    Main : {
-        screen : TabScreen,
-        navigationOptions : {
-            header : null,
-        }
-    }
-});
+// const freshToHomeApp = StackNavigator({
+//     Login : {
+//         screen : LoginScreen,
+//         navigationOptions : {
+//             header : null,
+//         }
+//     },
+//     Main : {
+//         screen : TabScreen,
+//         navigationOptions : {
+//             header : null,
+//         }
+//     }
+// });
 
 // export default freshToHomeApp;
 
-export const App = freshToHomeApp;
+// export const App = freshToHomeApp;
+
+export const App = TabScreen;
+
 
 
 

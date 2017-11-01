@@ -18,6 +18,7 @@ import SearchScreen from '../SearchScreen'
 import OrderScreen from '../OrderScreen'
 import UserInfoScreen from '../UserInfoScreen'
 import SettingsScreen from '../SettingsScreen'
+import LoginScreen from '../LoginScreen'
 
 
 import Icon from 'react-native-vector-icons/Ionicons'
@@ -137,6 +138,12 @@ const tabBarNavigatorApp = TabNavigator({
 
 //将StackNavigator与TabNavigator结合起来
 const composeTabAndStackNavigatorApp = StackNavigator({
+    Login : {
+        screen : LoginScreen,
+        navigationOptions : {
+            header : null,
+        }
+    },
     Tab : {
         screen : tabBarNavigatorApp,
         navigationOptions : {
