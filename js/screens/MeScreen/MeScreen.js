@@ -43,7 +43,7 @@ class MeScreen extends Component{
                         const { dispatch } = navigation;
 
                         dispatch(NavigationActions.navigate({
-                            routeName : 'Logout'
+                            routeName : 'Settings'
                         }));
                     }
                 }>

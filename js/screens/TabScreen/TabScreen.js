@@ -17,7 +17,7 @@ import ZoneScreen from '../ZoneScreen'
 import SearchScreen from '../SearchScreen'
 import OrderScreen from '../OrderScreen'
 import UserInfoScreen from '../UserInfoScreen'
-import LogoutScreen from '../LogoutScreen'
+import SettingsScreen from '../SettingsScreen'
 
 
 import Icon from 'react-native-vector-icons/Ionicons'
@@ -160,8 +160,8 @@ const composeTabAndStackNavigatorApp = StackNavigator({
     UserInfo : {
         screen : UserInfoScreen,
     },
-    Logout : {
-    screen : LogoutScreen,
+    Settings : {
+        screen : SettingsScreen,
     }
 },{
     headerMode: 'screen',

@@ -12,10 +12,10 @@ import {
 
 import Colors from '../../utils/color'
 
-export default class LogoutScreen extends Component{
+export default class SettingsScreen extends Component{
 
     static navigationOptions =({navigation}) => ({
-        title : '退出登录',
+        title : '设置',
         headerTitleStyle : { alignSelf : 'center'},
         headerBackTitle : '返回',
         headerTintColor : Colors.MainColor,

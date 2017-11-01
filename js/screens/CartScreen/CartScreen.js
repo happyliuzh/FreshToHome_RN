@@ -76,9 +76,16 @@ export default class CartScreen extends Component{
         {
             return (
                 <CartDefaultHint onPress={ () => {
+
+                    //回首页
+                    const { navigate }  = this.props.navigation;
+                    navigate('Home');
+
                     this.setState({
                         nodata:false,
                     });
+
+
                 }}/>
             );
         }
