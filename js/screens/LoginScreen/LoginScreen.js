@@ -22,13 +22,15 @@ export default class LoginScreen extends Component{
         return(
             <View style={[CommonStyles.center_layout_container,{justifyContent:'flex-end'}]}>
 
-                <BigRoundButton title = '微信登录'
-                                onPress = {
-                                    () => {
-                                        navigate('Main');
+                <View style = { styles.LoginView }>
+                    <BigRoundButton title = '微信登录'
+                                    onPress = {
+                                        () => {
+                                            navigate('Main');
+                                        }
                                     }
-                                }
-                />
+                    />
+                </View>
 
             </View>
         );
@@ -37,11 +39,6 @@ export default class LoginScreen extends Component{
 
 const styles = StyleSheet.create({
     LoginView : {
-        width : 200,
-        height : 44,
-        borderRadius : 22,
-        backgroundColor : '#ff8500',
-        justifyContent : 'center',
-        alignItems : 'center'
+        marginBottom : 200,
     }
 });

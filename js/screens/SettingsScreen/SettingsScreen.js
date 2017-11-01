@@ -17,6 +17,7 @@ import Colors from '../../utils/color'
 import Styles from '../../utils/css/styles'
 import SimpleCell from '../../components/Util/simpleCell'
 import CellType from './type'
+import BigRoundButton from '../../components/Util/button/bigRoundButton'
 
 export default class SettingsScreen extends Component{
 
@@ -49,11 +50,15 @@ export default class SettingsScreen extends Component{
     _renderFooter = () => {
         return (
             <View style = { _Styles.footer }>
-                <TouchableOpacity>
-                    <Text>
-                        退出当前账号
-                    </Text>
-                </TouchableOpacity>
+                <BigRoundButton title = '退出当前账号'
+                                onPress = {
+                                    () => {
+                                        alert('退出当前账号');
+                                    }
+                                }
+                >
+
+                </BigRoundButton>
             </View>
         );
     }
@@ -94,15 +99,10 @@ const _Styles = StyleSheet.create({
         flex : 1,
     },
     footer : {
-        height : 120,
+        height : 200,
         alignItems : 'center',
         justifyContent : 'center',
     },
-
-    touchButton : {
-
-    },
-
     text : {
         fontSize : 16,
         color : '#fff',
