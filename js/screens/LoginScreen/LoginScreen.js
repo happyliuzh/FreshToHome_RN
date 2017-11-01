@@ -8,6 +8,7 @@ import {View,
 } from 'react-native'
 import CommonStyles from '../../utils/css/styles'
 import Images from '../../utils/image/images'
+import BigRoundButton from '../../components/Util/button/bigRoundButton'
 
 export default class LoginScreen extends Component{
 
@@ -21,14 +22,13 @@ export default class LoginScreen extends Component{
         return(
             <View style={[CommonStyles.center_layout_container,{justifyContent:'flex-end'}]}>
 
-                <View style={{marginBottom : 200}}>
-                    <TouchableOpacity onPress={()=>{navigate('Main')}}>
-                        <View style = {styles.LoginView}>
-                            <Text style={{color : '#fff', fontSize : 16}}>微信登录</Text>
-                        </View>
-                    </TouchableOpacity>
-                </View>
-
+                <BigRoundButton title = '微信登录'
+                                onPress = {
+                                    () => {
+                                        navigate('Main');
+                                    }
+                                }
+                />
 
             </View>
         );
