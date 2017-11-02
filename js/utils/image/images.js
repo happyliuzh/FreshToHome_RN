@@ -4,10 +4,6 @@
 
 export default {
     TabIcon : {
-        Run_Image_F : require('./res/health_btn_run_f.png'),
-        Run_Image_S : require('./res/health_btn_run_s.png'),
-        Me_Image_F  : require('./res/btn_wo_default.png'),
-        Me_Image_S  : require('./res/btn_wo_pre.png'),
     },
 
     WebImage : {
@@ -17,7 +13,6 @@ export default {
     },
 
     Login : {
-        LoginLogo : require('./res/logo.jpeg'),
     },
 
     Me : {
@@ -57,6 +52,7 @@ export default {
         Selected        : require('./res/Common/selected.png'),
         Add             : require('./res/Common/add.png'),
         Reduce          : require('./res/Common/reduce.png'),
+        Share           : require('./res/Common/share.png'),
     },
 
     NativeImage : {

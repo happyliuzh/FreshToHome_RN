@@ -67,7 +67,8 @@ export default class CateListView extends Component
 
         return (
 
-            <DetailListItem>
+            <DetailListItem navigation = { this.props.navigation }
+            >
 
             </DetailListItem>
         );

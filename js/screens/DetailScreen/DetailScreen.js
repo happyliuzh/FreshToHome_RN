@@ -3,8 +3,11 @@ import {View,
     Text,
     StyleSheet,
     Button,
+    TouchableOpacity,
+    Image,
 } from 'react-native'
 import CommonStyles from '../../utils/css/styles'
+import Images from '../../utils/image'
 import Icon from 'react-native-vector-icons/Ionicons'
 import Spinner from 'react-native-loading-spinner-overlay'
 import { PulseLoader } from 'react-native-indicator'
@@ -39,33 +42,40 @@ export default class DetailScreen extends Component{
         };
     }
 
-    static navigationOptions = {
+    static navigationOptions = ( navigation ) => ({
         title : "商品详情",
-        headerRight : <Button title="分享" onPress={()=>{
+        headerRight :
+            <TouchableOpacity onPress = { () =>{
 
-                                                const { navigate } = this.props.navigation;
-                                                // navigate.goBack();
-                                                // navigate('Tab');
-                                                alert('去分享！');
+                        alert('去分享');
+                }
+            }>
+                 <Image source={Images.Common.Share} style={{
+                        width : 22,
+                        height : 22,
+                        marginRight : 16,
+                 }}/>
+             </TouchableOpacity>,
 
-                                            }}>
-                      </Button>,
-        // headerRight : <Icon.Button></Icon.Button>
         headerTintColor : Colors.MainColor,
         headerTitleStyle : { alignSelf : 'center'},
 
 
-    };
+    });
 
     render(){
         const  {params} = this.props.navigation.state;
         const { navigate } = this.props.navigation;
 
         return(
-            <View style={CommonStyles.top_layout_container}>
-                {
-                    RefreshLoader()
-                }
+            <View style={CommonStyles.center_layout_container}>
+                <TouchableOpacity>
+                    <Text style={{
+                        fontSize : 18,
+                    }}>
+                        点我测试。。
+                    </Text>
+                </TouchableOpacity>
             </View>
 
 
