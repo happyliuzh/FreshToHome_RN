@@ -8,6 +8,7 @@ import {View,
 } from 'react-native'
 import CommonStyles from '../../utils/css/styles'
 import Images from '../../utils/image'
+import DetailFooter from '../../components/Detail/DetailFooter'
 import Icon from 'react-native-vector-icons/Ionicons'
 import Spinner from 'react-native-loading-spinner-overlay'
 import { PulseLoader } from 'react-native-indicator'
@@ -68,14 +69,26 @@ export default class DetailScreen extends Component{
         const { navigate } = this.props.navigation;
 
         return(
-            <View style={CommonStyles.center_layout_container}>
-                <TouchableOpacity>
+            <View style={CommonStyles.top_layout_container}>
+                <TouchableOpacity style = { _styles.container }>
                     <Text style={{
                         fontSize : 18,
                     }}>
                         点我测试。。
                     </Text>
                 </TouchableOpacity>
+
+                <DetailFooter addCart={
+                    () => {
+
+                    }
+                } goCart= {
+                    () => {
+
+                    }
+                }
+
+                />
             </View>
 
 
@@ -84,3 +97,11 @@ export default class DetailScreen extends Component{
     }
 
 }
+
+const _styles = StyleSheet.create({
+    container : {
+        flex : 1,
+        alignItems : 'center',
+        justifyContent : 'center',
+    }
+});
