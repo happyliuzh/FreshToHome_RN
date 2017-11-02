@@ -10,24 +10,14 @@ import {StackNavigator, TabNavigator} from 'react-navigation';
 
 //scene
 import HomeScreen from '../HomeScreen'
-import DetailScreen from '../DetailScreen'
 import CartScreen from '../CartScreen'
 import MeScreen from '../MeScreen'
-import ZoneScreen from '../ZoneScreen'
-import SearchScreen from '../SearchScreen'
-import OrderScreen from '../OrderScreen'
-import UserInfoScreen from '../UserInfoScreen'
-import SettingsScreen from '../SettingsScreen'
-import LoginScreen from '../LoginScreen'
 
 
 import Icon from 'react-native-vector-icons/Ionicons'
 
 //util
 import Colors from '../../utils/color'
-import CardStackStyleInterpolator from 'react-navigation/src/views/CardStack/CardStackStyleInterpolator';
-
-
 
 function _swipeEnable() {
 
@@ -55,16 +45,8 @@ function _tabbarHeight() {
 }
 
 
-//测试StackNavigator
-const stackNavigatorApp = StackNavigator({
-    Home   : {screen: HomeScreen},
-    Detail : {screen: DetailScreen}
-});
-
-// export default stackNavigatorApp;
-
-//测试TabNavigator
-const tabBarNavigatorApp = TabNavigator({
+//TabScreen
+const TabScreen = TabNavigator({
         Home : {
             screen : HomeScreen,
             navigationOptions : {
@@ -131,52 +113,6 @@ const tabBarNavigatorApp = TabNavigator({
     }
 );
 
+export default TabScreen;
 
-
-
-// export default tabBarNavigatorApp;
-
-//将StackNavigator与TabNavigator结合起来
-const composeTabAndStackNavigatorApp = StackNavigator({
-    Login : {
-        screen : LoginScreen,
-        navigationOptions : {
-            header : null,
-        }
-    },
-    Tab : {
-        screen : tabBarNavigatorApp,
-        navigationOptions : {
-            headerTintColor : Colors.MainColor,
-        }
-    },
-    Detail : {
-        screen : DetailScreen,
-
-    },
-    Zone : {
-        screen : ZoneScreen,
-
-    },
-    Search : {
-        screen : SearchScreen,
-    },
-    Order : {
-        screen : OrderScreen,
-    },
-    UserInfo : {
-        screen : UserInfoScreen,
-    },
-    Settings : {
-        screen : SettingsScreen,
-    }
-},{
-    headerMode: 'screen',
-    transitionConfig:()=>({
-        screenInterpolator:CardStackStyleInterpolator.forHorizontal,
-    })
-});
-
-
-export default composeTabAndStackNavigatorApp;
 
