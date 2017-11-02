@@ -54,12 +54,10 @@ export default class SettingsScreen extends Component{
             <View style = { _Styles.footer }>
                 <BigRoundButton title = '退出当前账号'
                                 onPress = {
-                                    // () => {
-                                    //     alert('退出当前账号');
-                                    // }
 
                                     () => {
-                                        // navigate('Main');
+
+                                        const { dispatch }  = this.props.navigation;
                                         const resetAction = NavigationActions.reset({
                                             index : 0,
                                             actions : [
@@ -68,7 +66,11 @@ export default class SettingsScreen extends Component{
                                                 })
                                             ]
                                         });
-                                        this.props.navigation.dispatch(resetAction);
+                                        dispatch(resetAction);
+
+                                        // const backAction = NavigationActions.back();
+                                        // dispatch(backAction);
+                                        // this.props.navigation.goBack();
                                     }
                                 }
                 >
